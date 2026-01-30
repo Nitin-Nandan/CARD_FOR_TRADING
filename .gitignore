@@ -177,6 +177,3 @@ cython_debug/
 
 # Except sample data (if you want to include a small sample)
 !data/sample/**
-
-# Custom pandas_ta for python 3.10
-pandas_ta/
