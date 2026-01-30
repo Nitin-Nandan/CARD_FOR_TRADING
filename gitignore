@@ -1,0 +1,179 @@
+# Environment
+.env
+*.env
+.env.local
+
+# Data files (too large for git)
+data/raw/**/*.csv
+data/market_indices/*.csv
+data/processed/*.csv
+data/combined/*.csv
+data/windows/*.npy
+data/windows/*.npz
+
+# Keep directory structure
+!data/raw/.gitkeep
+!data/market_indices/.gitkeep
+!data/processed/.gitkeep
+!data/combined/.gitkeep
+!data/windows/.gitkeep
+
+# Model checkpoints (large files)
+models/checkpoints/*.pt
+models/checkpoints/*.pth
+models/checkpoints/*.ckpt
+
+# Keep checkpoint directory
+!models/checkpoints/.gitkeep
+
+# Results (generated)
+results/**/*.png
+results/**/*.pdf
+results/**/*.json
+results/**/*.csv
+
+# Keep results structure
+!results/.gitkeep
+!results/training_curves/.gitkeep
+!results/predictions/.gitkeep
+!results/metrics/.gitkeep
+
+# Logs
+logs/*.log
+logs/**/*.log
+*.log
+
+# Keep logs directory
+!logs/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+conda_env/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# PyCharm
+.idea/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~.nib
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre
+.pyre/
+
+# pytype
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# Profiling
+*.prof
+
+# Archives (if generated)
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Except sample data (if you want to include a small sample)
+!data/sample/**
