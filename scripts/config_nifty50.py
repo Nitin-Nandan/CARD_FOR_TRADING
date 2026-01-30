@@ -6,70 +6,78 @@ Used for data download and processing.
 """
 
 NIFTY_50_STOCKS = [
-    # IT Sector
+    # --- IT Sector ---
     "NSE:TCS-EQ",
     "NSE:INFY-EQ",
     "NSE:HCLTECH-EQ",
     "NSE:WIPRO-EQ",
     "NSE:TECHM-EQ",
-    "NSE:LTI-EQ",
-    
-    # Banking & Finance
+
+    # --- Banking & Finance ---
     "NSE:HDFCBANK-EQ",
     "NSE:ICICIBANK-EQ",
     "NSE:SBIN-EQ",
     "NSE:KOTAKBANK-EQ",
     "NSE:AXISBANK-EQ",
-    "NSE:INDUSINDBK-EQ",
     "NSE:BAJFINANCE-EQ",
     "NSE:BAJAJFINSV-EQ",
+    "NSE:SHRIRAMFIN-EQ",      
+    # "NSE:JIOFIN-EQ",        <-- REMOVED (Listed Aug 2023, no data for 2022)
     "NSE:HDFCLIFE-EQ",
     "NSE:SBILIFE-EQ",
-    
-    # Energy & Power
+
+    # --- Energy, Oil & Gas ---
     "NSE:RELIANCE-EQ",
     "NSE:NTPC-EQ",
     "NSE:POWERGRID-EQ",
     "NSE:ONGC-EQ",
-    "NSE:ADANIPORTS-EQ",
+    "NSE:COALINDIA-EQ",
     "NSE:ADANIENT-EQ",
-    
-    # Automobiles
+    "NSE:ADANIPORTS-EQ",
+    "NSE:BPCL-EQ",            # <-- ADDED (Classic stock with full history)
+
+    # --- Automobiles ---
     "NSE:MARUTI-EQ",
     "NSE:M&M-EQ",
     "NSE:BAJAJ-AUTO-EQ",
-    "NSE:TATAMOTORS-EQ",
-    "NSE:EICHERMOT-EQ",
+    # "NSE:TATAMOTORS-EQ",      <-- REMOVED BECAUSE OF DEMERGER
     "NSE:HEROMOTOCO-EQ",
-    
-    # FMCG
+    "NSE:EICHERMOT-EQ",
+
+    # --- FMCG & Consumption ---
     "NSE:HINDUNILVR-EQ",
     "NSE:ITC-EQ",
     "NSE:NESTLEIND-EQ",
+    "NSE:TATACONSUM-EQ",      
+    "NSE:TITAN-EQ",
+    "NSE:ASIANPAINT-EQ",
+    "NSE:TRENT-EQ",           
+    # "NSE:ZOMATO-EQ",          <-- REMOVED BEACUSE FYER'S API DIDN'T RESPOND
     "NSE:BRITANNIA-EQ",
-    
-    # Pharma
+
+    # --- Pharma & Healthcare ---
     "NSE:SUNPHARMA-EQ",
     "NSE:DRREDDY-EQ",
     "NSE:CIPLA-EQ",
-    "NSE:DIVISLAB-EQ",
-    
-    # Metals & Mining
+    "NSE:APOLLOHOSP-EQ",
+    "NSE:MAXHEALTH-EQ",       # (Listed Aug 2020, Safe for 2022)
+
+    # --- Metals & Mining ---
     "NSE:TATASTEEL-EQ",
     "NSE:HINDALCO-EQ",
     "NSE:JSWSTEEL-EQ",
-    
-    # Telecom & Media
+
+    # --- Telecom ---
     "NSE:BHARTIARTL-EQ",
-    
-    # Infrastructure & Construction
-    "NSE:LT-EQ",
+
+    # --- Infrastructure & Construction ---
+    "NSE:LT-EQ",              
     "NSE:ULTRACEMCO-EQ",
     "NSE:GRASIM-EQ",
-    
-    # Conglomerate
-    "NSE:TITAN-EQ",
-    "NSE:ASIANPAINT-EQ",
+
+    # --- Defence & Aviation ---
+    "NSE:BEL-EQ",             
+    "NSE:INDIGO-EQ",          
 ]
 
 # Nifty 50 Index symbol

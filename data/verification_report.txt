@@ -1,0 +1,664 @@
+============================================================
+NIFTY 50 DATA VERIFICATION REPORT
+============================================================
+
+Total stocks: 50
+Successful: 50
+Failed: 0
+Good quality: 0
+Has issues: 50
+
+============================================================
+DETAILED RESULTS
+============================================================
+
+
+ADANIENT
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,186
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+ADANIPORTS
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,187
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+APOLLOHOSP
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,187
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+ASIANPAINT
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,188
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+AXISBANK
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,187
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+BAJAJ-AUTO
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,186
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+BAJAJFINSV
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,187
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+BAJFINANCE
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,187
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+BEL
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,189
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+BHARTIARTL
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,187
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+BPCL
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,188
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+BRITANNIA
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,187
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+CIPLA
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,188
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+COALINDIA
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,187
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+DRREDDY
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,181
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+EICHERMOT
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,180
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+GRASIM
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,179
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+HCLTECH
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,182
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+HDFCBANK
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,182
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+HDFCLIFE
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,180
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+HEROMOTOCO
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,180
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+HINDALCO
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,180
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+HINDUNILVR
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,165
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+ICICIBANK
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,181
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+INDIGO
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,181
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+INFY
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,183
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+ITC
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,158
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+JSWSTEEL
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,188
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+KOTAKBANK
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,187
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+LT
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,187
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+M&M
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,188
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+MARUTI
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,186
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+MAXHEALTH
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,166
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 995
+
+NESTLEIND
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,188
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+NTPC
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,189
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+ONGC
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,188
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+POWERGRID
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,188
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+RELIANCE
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,153
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+SBILIFE
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,180
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+SBIN
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,181
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+SHRIRAMFIN
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,180
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+SUNPHARMA
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,180
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+TATACONSUM
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,182
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+TATASTEEL
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,183
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+TCS
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,179
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+TECHM
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,182
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+TITAN
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,181
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+TRENT
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,180
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+ULTRACEMCO
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,179
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994
+
+WIPRO
+----------------------------------------
+  Status: ISSUES
+  Rows: 370,182
+  Date range: 2022-01-03 09:15:00 → 2025-12-31 15:29:00
+  Days span: 1458
+  Avg daily rows: 254
+  Missing values: 0
+  Invalid prices: 0
+  Extreme changes: 0
+  Outside hours: 180
+  Time gaps: 994

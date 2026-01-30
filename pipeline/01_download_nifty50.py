@@ -403,6 +403,11 @@ def main():
     
     for i, symbol in enumerate(stocks, 1):
         stock_name = symbol_to_name(symbol)
+
+        # Check if we already have the full file
+        if (DATA_DIR / stock_name / "full.csv").exists():
+            logger.info(f"[{i}/{len(stocks)}] Skipping {stock_name} (Already downloaded) ✅")
+            continue
         
         logger.info(f"\n[{i}/{len(stocks)}] Processing {stock_name}...")
         
