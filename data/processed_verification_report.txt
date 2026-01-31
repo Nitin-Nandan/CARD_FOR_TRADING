@@ -1,0 +1,714 @@
+============================================================
+PROCESSED DATA VERIFICATION REPORT
+============================================================
+
+Total stocks: 50
+Successful: 50
+Failed: 0
+Good quality: 47
+Has issues: 3
+
+============================================================
+DETAILED RESULTS
+============================================================
+
+
+ADANIENT
+----------------------------------------
+  Status: ISSUES
+  Rows: 369,016
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹2534.00
+  Close std: ₹545.43
+  Volume mean: 7,326
+  Nifty correlation: 0.169
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+ADANIPORTS
+----------------------------------------
+  Status: GOOD
+  Rows: 369,017
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹1058.21
+  Close std: ₹305.90
+  Volume mean: 14,768
+  Nifty correlation: 0.939
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+APOLLOHOSP
+----------------------------------------
+  Status: GOOD
+  Rows: 369,017
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹5719.19
+  Close std: ₹1233.00
+  Volume mean: 1,294
+  Nifty correlation: 0.969
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+ASIANPAINT
+----------------------------------------
+  Status: ISSUES
+  Rows: 369,018
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹2895.27
+  Close std: ₹355.70
+  Volume mean: 3,137
+  Nifty correlation: -0.524
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+AXISBANK
+----------------------------------------
+  Status: GOOD
+  Rows: 369,017
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹999.65
+  Close std: ₹176.49
+  Volume mean: 24,758
+  Nifty correlation: 0.929
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+BAJAJ-AUTO
+----------------------------------------
+  Status: GOOD
+  Rows: 369,016
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹6567.89
+  Close std: ₹2537.74
+  Volume mean: 1,163
+  Nifty correlation: 0.944
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+BAJAJFINSV
+----------------------------------------
+  Status: GOOD
+  Rows: 369,017
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹1663.38
+  Close std: ₹232.30
+  Volume mean: 5,251
+  Nifty correlation: 0.770
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+BAJFINANCE
+----------------------------------------
+  Status: GOOD
+  Rows: 369,017
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹745.68
+  Close std: ₹120.61
+  Volume mean: 29,502
+  Nifty correlation: 0.681
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+BEL
+----------------------------------------
+  Status: GOOD
+  Rows: 369,019
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹207.20
+  Close std: ₹116.12
+  Volume mean: 58,570
+  Nifty correlation: 0.959
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+BHARTIARTL
+----------------------------------------
+  Status: GOOD
+  Rows: 369,017
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹1218.38
+  Close std: ₹474.59
+  Volume mean: 17,205
+  Nifty correlation: 0.956
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+BPCL
+----------------------------------------
+  Status: GOOD
+  Rows: 369,018
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹243.80
+  Close std: ₹72.93
+  Volume mean: 27,843
+  Nifty correlation: 0.955
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+BRITANNIA
+----------------------------------------
+  Status: GOOD
+  Rows: 369,017
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹4783.36
+  Close std: ₹824.87
+  Volume mean: 940
+  Nifty correlation: 0.914
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+CIPLA
+----------------------------------------
+  Status: GOOD
+  Rows: 369,018
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹1270.97
+  Close std: ₹245.22
+  Volume mean: 4,820
+  Nifty correlation: 0.954
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+COALINDIA
+----------------------------------------
+  Status: GOOD
+  Rows: 369,017
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹325.19
+  Close std: ₹107.82
+  Volume mean: 26,582
+  Nifty correlation: 0.890
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+DRREDDY
+----------------------------------------
+  Status: GOOD
+  Rows: 369,011
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹1095.31
+  Close std: ₹184.14
+  Volume mean: 5,633
+  Nifty correlation: 0.930
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+EICHERMOT
+----------------------------------------
+  Status: GOOD
+  Rows: 369,010
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹4213.83
+  Close std: ₹1249.14
+  Volume mean: 1,716
+  Nifty correlation: 0.908
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+GRASIM
+----------------------------------------
+  Status: GOOD
+  Rows: 369,009
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹2139.66
+  Close std: ₹482.27
+  Volume mean: 1,984
+  Nifty correlation: 0.985
+  Hour_sin range: [-0.791, 0.659]
+  Hour_cos range: [-1.000, -0.612]
+
+HCLTECH
+----------------------------------------
+  Status: GOOD
+  Rows: 369,012
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹1367.09
+  Close std: ₹286.41
+  Volume mean: 8,061
+  Nifty correlation: 0.889
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+HDFCBANK
+----------------------------------------
+  Status: GOOD
+  Rows: 369,012
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹822.06
+  Close std: ₹94.07
+  Volume mean: 73,269
+  Nifty correlation: 0.767
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+HDFCLIFE
+----------------------------------------
+  Status: GOOD
+  Rows: 369,010
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹632.53
+  Close std: ₹81.83
+  Volume mean: 10,273
+  Nifty correlation: 0.811
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+HEROMOTOCO
+----------------------------------------
+  Status: GOOD
+  Rows: 369,010
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹3797.97
+  Close std: ₹1154.27
+  Volume mean: 1,849
+  Nifty correlation: 0.921
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+HINDALCO
+----------------------------------------
+  Status: GOOD
+  Rows: 369,010
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹561.22
+  Close std: ₹127.72
+  Volume mean: 19,754
+  Nifty correlation: 0.902
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+HINDUNILVR
+----------------------------------------
+  Status: ISSUES
+  Rows: 368,995
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹2431.28
+  Close std: ₹174.36
+  Volume mean: 4,589
+  Nifty correlation: 0.142
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+ICICIBANK
+----------------------------------------
+  Status: GOOD
+  Rows: 369,011
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹1067.48
+  Close std: ₹231.08
+  Volume mean: 36,826
+  Nifty correlation: 0.958
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+INDIGO
+----------------------------------------
+  Status: GOOD
+  Rows: 369,011
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹3390.98
+  Close std: ₹1440.86
+  Volume mean: 2,875
+  Nifty correlation: 0.955
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+INFY
+----------------------------------------
+  Status: GOOD
+  Rows: 369,013
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹1578.07
+  Close std: ₹178.76
+  Volume mean: 18,532
+  Nifty correlation: 0.357
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+ITC
+----------------------------------------
+  Status: GOOD
+  Rows: 368,988
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹396.21
+  Close std: ₹74.07
+  Volume mean: 39,088
+  Nifty correlation: 0.687
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+JSWSTEEL
+----------------------------------------
+  Status: GOOD
+  Rows: 369,018
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹841.69
+  Close std: ₹160.15
+  Volume mean: 6,917
+  Nifty correlation: 0.949
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+KOTAKBANK
+----------------------------------------
+  Status: GOOD
+  Rows: 369,017
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹373.64
+  Close std: ₹28.04
+  Volume mean: 55,218
+  Nifty correlation: 0.477
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+LT
+----------------------------------------
+  Status: GOOD
+  Rows: 369,017
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹2900.65
+  Close std: ₹791.97
+  Volume mean: 5,636
+  Nifty correlation: 0.954
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+M&M
+----------------------------------------
+  Status: GOOD
+  Rows: 369,018
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹2049.14
+  Close std: ₹911.22
+  Volume mean: 7,950
+  Nifty correlation: 0.960
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+MARUTI
+----------------------------------------
+  Status: GOOD
+  Rows: 369,016
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹10828.41
+  Close std: ₹2320.43
+  Volume mean: 1,433
+  Nifty correlation: 0.911
+  Hour_sin range: [-0.791, 0.659]
+  Hour_cos range: [-1.000, -0.612]
+
+MAXHEALTH
+----------------------------------------
+  Status: GOOD
+  Rows: 368,996
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹739.53
+  Close std: ₹305.26
+  Volume mean: 6,508
+  Nifty correlation: 0.953
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+NESTLEIND
+----------------------------------------
+  Status: GOOD
+  Rows: 369,018
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹1109.87
+  Close std: ₹136.94
+  Volume mean: 4,017
+  Nifty correlation: 0.823
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+NTPC
+----------------------------------------
+  Status: GOOD
+  Rows: 369,019
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹265.30
+  Close std: ₹93.06
+  Volume mean: 38,281
+  Nifty correlation: 0.938
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+ONGC
+----------------------------------------
+  Status: GOOD
+  Rows: 369,018
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹209.18
+  Close std: ₹55.36
+  Volume mean: 43,029
+  Nifty correlation: 0.882
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+POWERGRID
+----------------------------------------
+  Status: GOOD
+  Rows: 369,018
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹236.31
+  Close std: ₹65.79
+  Volume mean: 40,012
+  Nifty correlation: 0.929
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+RELIANCE
+----------------------------------------
+  Status: GOOD
+  Rows: 368,983
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹1323.17
+  Close std: ₹118.37
+  Volume mean: 33,354
+  Nifty correlation: 0.704
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+SBILIFE
+----------------------------------------
+  Status: GOOD
+  Rows: 369,010
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹1437.38
+  Close std: ₹264.08
+  Volume mean: 3,287
+  Nifty correlation: 0.933
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+SBIN
+----------------------------------------
+  Status: GOOD
+  Rows: 369,011
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹678.32
+  Close std: ₹144.15
+  Volume mean: 39,924
+  Nifty correlation: 0.961
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+SHRIRAMFIN
+----------------------------------------
+  Status: GOOD
+  Rows: 369,010
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹448.53
+  Close std: ₹184.01
+  Volume mean: 16,947
+  Nifty correlation: 0.965
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+SUNPHARMA
+----------------------------------------
+  Status: GOOD
+  Rows: 369,010
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹1330.34
+  Close std: ₹364.22
+  Volume mean: 6,597
+  Nifty correlation: 0.963
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+TATACONSUM
+----------------------------------------
+  Status: GOOD
+  Rows: 369,012
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹939.11
+  Close std: ₹171.70
+  Volume mean: 4,278
+  Nifty correlation: 0.919
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+TATASTEEL
+----------------------------------------
+  Status: GOOD
+  Rows: 369,013
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹134.66
+  Close std: ₹24.46
+  Volume mean: 123,553
+  Nifty correlation: 0.893
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+TCS
+----------------------------------------
+  Status: GOOD
+  Rows: 369,009
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹3566.54
+  Close std: ₹397.10
+  Volume mean: 6,255
+  Nifty correlation: 0.349
+  Hour_sin range: [-0.791, 0.659]
+  Hour_cos range: [-1.000, -0.612]
+
+TECHM
+----------------------------------------
+  Status: GOOD
+  Rows: 369,012
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹1335.88
+  Close std: ₹230.93
+  Volume mean: 6,394
+  Nifty correlation: 0.750
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+TITAN
+----------------------------------------
+  Status: GOOD
+  Rows: 369,011
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹3091.12
+  Close std: ₹513.92
+  Volume mean: 2,972
+  Nifty correlation: 0.894
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+TRENT
+----------------------------------------
+  Status: GOOD
+  Rows: 369,010
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹3422.18
+  Close std: ₹2095.28
+  Volume mean: 2,274
+  Nifty correlation: 0.920
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]
+
+ULTRACEMCO
+----------------------------------------
+  Status: GOOD
+  Rows: 369,009
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹9269.64
+  Close std: ₹2185.94
+  Volume mean: 946
+  Nifty correlation: 0.978
+  Hour_sin range: [-0.791, 0.659]
+  Hour_cos range: [-1.000, -0.612]
+
+WIPRO
+----------------------------------------
+  Status: GOOD
+  Rows: 369,012
+  Date range: 2022-01-03 09:45:00 → 2025-12-31 15:29:00
+  Features: 19
+  NaN values: 0
+  Close mean: ₹239.14
+  Close std: ₹36.93
+  Volume mean: 34,328
+  Nifty correlation: 0.479
+  Hour_sin range: [-0.793, 0.659]
+  Hour_cos range: [-1.000, -0.609]

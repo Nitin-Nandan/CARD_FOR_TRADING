@@ -209,7 +209,7 @@ def main():
             logger.error(f"  - {r['stock']}: {r.get('error', 'Unknown')}")
     
     # Write detailed report
-    with open(REPORT_PATH, 'w') as f:
+    with open(REPORT_PATH, 'w', encoding='utf-8') as f:
         f.write("="*60 + "\n")
         f.write("PROCESSED DATA VERIFICATION REPORT\n")
         f.write("="*60 + "\n\n")
