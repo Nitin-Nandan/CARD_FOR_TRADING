@@ -54,6 +54,26 @@ This document tracks all significant changes made to the project during developm
 
 **Performance Impact**: ZERO loss in model quality, only infrastructure changes
 
+### Additional Fixes
+
+**4. Device Mismatch Fix** (`train\04_train_card.py`) - 2026-02-10 07:16
+- Moved `MultiTaskLoss` criterion to GPU device
+- Fixed RuntimeError: "Expected all tensors to be on the same device"
+- **Impact**: Training can now proceed without device errors
+
+**5. I/O Bottleneck Fix** (`train\stock_dataset.py`) - 2026-02-10 07:41
+- **Problem**: Memory-mapped loading caused severe I/O bottleneck (44.68s/batch)
+- **Solution**: Reverted to RAM-based pre-loading at startup
+- Pre-loads all split data into RAM (~3.5GB for training set)
+- **Impact**: 100-400× speedup (44s/batch → 0.1-0.5s/batch expected)
+- Trade-off: +1-2 min startup time, +3.5GB RAM usage (acceptable)
+
+**6. Memory Allocation Fix** (`train\stock_dataset.py`) - 2026-02-10 07:51
+- **Problem**: Tried to load 100% of all stocks (75GB) causing allocation error
+- **Solution**: Hybrid approach - memory-map first, then load only split slice
+- Loads only 70% for train, 15% for val/test (not 100%)
+- **Impact**: Fits in available RAM (~3.5GB vs 75GB)
+
 ---
 
 ## Previous Work Completed

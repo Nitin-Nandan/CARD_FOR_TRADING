@@ -32,19 +32,35 @@ class TrainingConfig:
     # DATA
     # ========================================================================
     # Nifty 50 stocks (all 50)
+    # PHASE 1: 10 stocks for proof of concept (diverse sectors)
+    # Full 50-stock list commented out - uncomment for Phase 2
     STOCKS = [
-        'ADANIPORTS', 'ASIANPAINT', 'AXISBANK', 'BAJAJ-AUTO', 'BAJFINANCE',
-        'BAJAJFINSV', 'BPCL', 'BHARTIARTL', 'BRITANNIA', 'CIPLA',
-        'COALINDIA', 'DRREDDY', 'EICHERMOT', 'GRASIM',
-        'HCLTECH', 'HDFCBANK', 'HDFCLIFE', 'HEROMOTOCO', 'HINDALCO',
-        'HINDUNILVR', 'ICICIBANK', 'ITC', 'INFY',
-        'JSWSTEEL', 'KOTAKBANK', 'LT', 'M&M', 'MARUTI',
-        'NTPC', 'NESTLEIND', 'ONGC', 'POWERGRID', 'RELIANCE',
-        'SBILIFE', 'SHRIRAMFIN', 'SBIN', 'SUNPHARMA', 'TCS',
-        'TATACONSUM', 'TATASTEEL', 'TECHM', 'TITAN',
-        'TRENT', 'ULTRACEMCO', 'WIPRO', 'ADANIENT',
-        'BEL', 'INDIGO', 'APOLLOHOSP', 'MAXHEALTH'
+        'RELIANCE',    # Energy
+        'TCS',         # IT
+        'INFY',        # IT
+        'HDFCBANK',    # Banking
+        'ICICIBANK',   # Banking
+        'BHARTIARTL',  # Telecom
+        'ITC',         # FMCG
+        'SBIN',        # Banking
+        'BAJFINANCE',  # Finance
+        'MARUTI'       # Auto
     ]
+    
+    # Full 50 stocks (for Phase 2 - batch loading):
+    # STOCKS = [
+    #     'ADANIPORTS', 'ASIANPAINT', 'AXISBANK', 'BAJAJ-AUTO', 'BAJFINANCE',
+    #     'BAJAJFINSV', 'BPCL', 'BHARTIARTL', 'BRITANNIA', 'CIPLA',
+    #     'COALINDIA', 'DRREDDY', 'EICHERMOT', 'GRASIM',
+    #     'HCLTECH', 'HDFCBANK', 'HDFCLIFE', 'HEROMOTOCO', 'HINDALCO',
+    #     'HINDUNILVR', 'ICICIBANK', 'ITC', 'INFY',
+    #     'JSWSTEEL', 'KOTAKBANK', 'LT', 'M&M', 'MARUTI',
+    #     'NTPC', 'NESTLEIND', 'ONGC', 'POWERGRID', 'RELIANCE',
+    #     'SBILIFE', 'SHRIRAMFIN', 'SBIN', 'SUNPHARMA', 'TCS',
+    #     'TATACONSUM', 'TATASTEEL', 'TECHM', 'TITAN',
+    #     'TRENT', 'ULTRACEMCO', 'WIPRO', 'ADANIENT',
+    #     'BEL', 'INDIGO', 'APOLLOHOSP', 'MAXHEALTH'
+    # ]
     
     # Data splits
     TRAIN_RATIO = 0.7

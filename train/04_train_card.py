@@ -86,7 +86,7 @@ class Trainer:
             horizon=config.PRED_LEN,
             alpha=config.LOSS_ALPHA,
             beta=config.LOSS_BETA
-        )
+        ).to(self.device)  # Move to GPU to match model device
         
         # Optimizer
         self.optimizer = optim.AdamW(
