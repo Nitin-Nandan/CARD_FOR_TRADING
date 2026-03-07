@@ -35,7 +35,8 @@ from config_nifty50 import get_stock_symbols, symbol_to_name
 # Paths
 DATA_DIR = PROJECT_ROOT / "data" / "raw"
 INDEX_DIR = PROJECT_ROOT / "data" / "market_indices"
-REPORT_PATH = PROJECT_ROOT / "data" / "verification_report.txt"
+REPORT_PATH = PROJECT_ROOT / "logs" / "reports" / "verification_report.txt"
+REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
 
 logger.remove()
 logger.add(sys.stdout, level="INFO")

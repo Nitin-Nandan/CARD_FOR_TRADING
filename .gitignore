@@ -7,7 +7,7 @@
 data/raw/**/*.csv
 data/market_indices/*.csv
 data/processed/*.csv
-data/combined/*.csv
+
 data/windows/*.npy
 data/windows/*.npz
 
@@ -15,16 +15,12 @@ data/windows/*.npz
 !data/raw/.gitkeep
 !data/market_indices/.gitkeep
 !data/processed/.gitkeep
-!data/combined/.gitkeep
+
 !data/windows/.gitkeep
 
-# Model checkpoints (large files)
-models/checkpoints/*.pt
-models/checkpoints/*.pth
-models/checkpoints/*.ckpt
-
-# Keep checkpoint directory
-!models/checkpoints/.gitkeep
+# Checkpoints (large files)
+checkpoints/*.pt
+checkpoints/fine_tuned/*.pt
 
 # Results (generated)
 results/**/*.png
@@ -41,10 +37,14 @@ results/**/*.csv
 # Logs
 logs/*.log
 logs/**/*.log
+logs/*.json
+logs/**/*.json
+logs/reports/*.txt
 *.log
 
 # Keep logs directory
 !logs/.gitkeep
+!logs/reports/.gitkeep
 
 # Python
 __pycache__/

@@ -1,11 +1,12 @@
 """
-Evaluation Metrics for Stock Prediction
+Evaluation Metrics for CARD Close-Price Prediction
 
-Comprehensive metrics to evaluate model performance:
-- Direction accuracy (most important for trading)
-- MAE / MSE (standard regression metrics)
-- Correlation (prediction quality)
-- Sharpe-like ratio (risk-adjusted returns)
+Metrics:
+1. Direction Accuracy  — % correct up/down between consecutive predicted steps
+   (np.sign(price) is always +1 for INR, so we use step-over-step delta instead)
+2. MAE  — Mean Absolute Error in ₹
+3. RMSE — Root Mean Squared Error in ₹
+4. Correlation — Pearson between pred and target trajectories
 """
 
 import torch
@@ -15,161 +16,84 @@ from typing import Dict, Tuple
 
 class MetricsCalculator:
     """
-    Calculate all evaluation metrics
-    
-    Metrics:
-    1. Direction Accuracy: % of correct up/down predictions
-    2. MAE: Mean Absolute Error
-    3. MSE: Mean Squared Error  
-    4. RMSE: Root Mean Squared Error
-    5. Correlation: Pearson correlation
-    6. Sharpe: Risk-adjusted returns metric
+    Accumulates batches of (pred_close, y_close) tensors, then computes:
+      - direction_accuracy : step-over-step change direction match (%)
+      - mae                : Mean Abs Error in ₹
+      - rmse               : Root Mean Squared Error in ₹
+      - correlation        : Pearson r between flattened pred & target
     """
-    
+
     def __init__(self):
         self.reset()
-    
+
     def reset(self):
-        """Reset accumulated metrics"""
-        self.all_preds = []
+        self.all_preds   = []
         self.all_targets = []
-        self.all_volatility_preds = []
-        self.all_volatility_targets = []
     
-    def update(
-        self,
-        predictions: torch.Tensor,
-        targets: torch.Tensor,
-        volatility_preds: torch.Tensor = None,
-        volatility_targets: torch.Tensor = None
-    ):
+    def update(self, predictions: torch.Tensor, targets: torch.Tensor):
         """
-        Accumulate predictions and targets
-        
         Args:
-            predictions: (batch, pred_len) or (batch, channels, pred_len)
-            targets: Same shape as predictions
-            volatility_preds: Optional volatility predictions
-            volatility_targets: Optional volatility targets
+            predictions: (B, pred_len) — predicted close prices
+            targets:     (B, pred_len) — actual close prices
         """
-        # Move to CPU and convert to numpy
-        preds = predictions.detach().cpu().numpy()
-        targs = targets.detach().cpu().numpy()
-        
-        # Flatten if multi-channel
-        if preds.ndim == 3:
-            # (batch, channels, pred_len) -> (batch * channels * pred_len,)
-            preds = preds.reshape(-1)
-            targs = targs.reshape(-1)
-        elif preds.ndim == 2:
-            # (batch, pred_len) -> (batch * pred_len,)
-            preds = preds.reshape(-1)
-            targs = targs.reshape(-1)
-        
+        preds = predictions.detach().cpu().numpy()   # (B, T)
+        targs = targets.detach().cpu().numpy()       # (B, T)
         self.all_preds.append(preds)
         self.all_targets.append(targs)
-        
-        # Volatility
-        if volatility_preds is not None and volatility_targets is not None:
-            vol_preds = volatility_preds.detach().cpu().numpy()
-            vol_targs = volatility_targets.detach().cpu().numpy()
-            
-            if vol_preds.ndim == 3:
-                vol_preds = vol_preds.reshape(-1)
-                vol_targs = vol_targs.reshape(-1)
-            elif vol_preds.ndim == 2:
-                vol_preds = vol_preds.reshape(-1)
-                vol_targs = vol_targs.reshape(-1)
-            
-            self.all_volatility_preds.append(vol_preds)
-            self.all_volatility_targets.append(vol_targs)
     
     def compute(self) -> Dict[str, float]:
-        """
-        Compute all metrics
-        
-        Returns:
-            Dictionary of metric name -> value
-        """
+        """Compute all metrics over accumulated batches."""
         if not self.all_preds:
             return {}
-        
-        # Concatenate all batches
-        preds = np.concatenate(self.all_preds)
-        targets = np.concatenate(self.all_targets)
-        
+
+        # Stack: shape (N_total_batches, B, T)
+        preds   = np.concatenate(self.all_preds,   axis=0)   # (N, T)
+        targets = np.concatenate(self.all_targets, axis=0)   # (N, T)
+        N, T    = preds.shape
+
         metrics = {}
-        
+
         # ====================================================================
-        # DIRECTION ACCURACY (Most important for trading!)
+        # DIRECTION ACCURACY
+        # For close prices, sign(price) is always +1.
+        # Instead: compare step-over-step changes within the 15-step window.
+        # T-1 deltas per sample.  If T==1 this is undefined (skip).
         # ====================================================================
-        pred_direction = np.sign(preds)
-        target_direction = np.sign(targets)
-        direction_correct = (pred_direction == target_direction).astype(float)
-        metrics['direction_accuracy'] = direction_correct.mean() * 100  # Percentage
-        
-        # Separate for up/down
-        up_mask = target_direction > 0
-        down_mask = target_direction < 0
-        
-        if up_mask.sum() > 0:
-            metrics['direction_accuracy_up'] = direction_correct[up_mask].mean() * 100
-        if down_mask.sum() > 0:
-            metrics['direction_accuracy_down'] = direction_correct[down_mask].mean() * 100
-        
+        if T > 1:
+            pred_delta   = np.diff(preds,   axis=1)  # (N, T-1)
+            target_delta = np.diff(targets, axis=1)  # (N, T-1)
+            dir_correct  = (np.sign(pred_delta) == np.sign(target_delta)).astype(float)
+            metrics['direction_accuracy'] = dir_correct.mean() * 100
+
+            up_mask   = target_delta > 0
+            down_mask = target_delta < 0
+            if up_mask.sum() > 0:
+                metrics['direction_accuracy_up']   = dir_correct[up_mask].mean()   * 100
+            if down_mask.sum() > 0:
+                metrics['direction_accuracy_down'] = dir_correct[down_mask].mean() * 100
+
         # ====================================================================
-        # REGRESSION METRICS
+        # REGRESSION METRICS  (flat over all N*T values)
         # ====================================================================
-        mae = np.abs(preds - targets).mean()
-        mse = ((preds - targets) ** 2).mean()
+        p_flat = preds.reshape(-1)
+        t_flat = targets.reshape(-1)
+
+        mae  = np.abs(p_flat - t_flat).mean()
+        mse  = ((p_flat - t_flat) ** 2).mean()
         rmse = np.sqrt(mse)
-        
-        metrics['mae'] = mae
-        metrics['mse'] = mse
+
+        metrics['mae']  = mae
+        metrics['mse']  = mse
         metrics['rmse'] = rmse
-        
-        # Relative MAE (as percentage of mean absolute return)
-        mean_abs_return = np.abs(targets).mean()
-        if mean_abs_return > 0:
-            metrics['relative_mae'] = (mae / mean_abs_return) * 100
-        
+
         # ====================================================================
-        # CORRELATION
+        # CORRELATION  (on flattened arrays)
         # ====================================================================
-        if len(preds) > 1 and preds.std() > 0 and targets.std() > 0:
-            correlation = np.corrcoef(preds, targets)[0, 1]
-            metrics['correlation'] = correlation
+        if p_flat.std() > 0 and t_flat.std() > 0:
+            metrics['correlation'] = float(np.corrcoef(p_flat, t_flat)[0, 1])
         else:
             metrics['correlation'] = 0.0
-        
-        # ====================================================================
-        # SHARPE-LIKE METRIC
-        # ====================================================================
-        # Simulated returns if we trade based on predictions
-        simulated_returns = preds * targets  # Profit if direction correct
-        if simulated_returns.std() > 0:
-            sharpe = simulated_returns.mean() / (simulated_returns.std() + 1e-8)
-            metrics['sharpe'] = sharpe
-        else:
-            metrics['sharpe'] = 0.0
-        
-        # ====================================================================
-        # VOLATILITY METRICS (if available)
-        # ====================================================================
-        if self.all_volatility_preds:
-            vol_preds = np.concatenate(self.all_volatility_preds)
-            vol_targets = np.concatenate(self.all_volatility_targets)
-            
-            vol_mae = np.abs(vol_preds - vol_targets).mean()
-            vol_mse = ((vol_preds - vol_targets) ** 2).mean()
-            
-            metrics['volatility_mae'] = vol_mae
-            metrics['volatility_mse'] = vol_mse
-            
-            if vol_preds.std() > 0 and vol_targets.std() > 0:
-                vol_corr = np.corrcoef(vol_preds, vol_targets)[0, 1]
-                metrics['volatility_correlation'] = vol_corr
-        
+
         return metrics
     
     def compute_and_reset(self) -> Dict[str, float]:
@@ -180,54 +104,22 @@ class MetricsCalculator:
 
 
 def format_metrics(metrics: Dict[str, float], prefix: str = "") -> str:
-    """
-    Format metrics for printing
-    
-    Args:
-        metrics: Dictionary of metrics
-        prefix: Prefix for each line (e.g., "Train: " or "Val: ")
-    
-    Returns:
-        Formatted string
-    """
     if not metrics:
-        return f"{prefix}No metrics available"
-    
+        return f"{prefix}No metrics"
     lines = []
-    
-    # Direction accuracy (most important)
     if 'direction_accuracy' in metrics:
-        lines.append(
-            f"{prefix}Dir Acc: {metrics['direction_accuracy']:.2f}%"
-        )
+        lines.append(f"{prefix}Dir Acc: {metrics['direction_accuracy']:.1f}%")
         if 'direction_accuracy_up' in metrics:
             lines.append(
-                f"  ↑ Up: {metrics['direction_accuracy_up']:.2f}%  "
-                f"↓ Down: {metrics.get('direction_accuracy_down', 0):.2f}%"
+                f"  ↑ Up: {metrics['direction_accuracy_up']:.1f}%  "
+                f"↓ Down: {metrics.get('direction_accuracy_down', 0):.1f}%"
             )
-    
-    # Error metrics
     if 'mae' in metrics:
         lines.append(
-            f"{prefix}MAE: {metrics['mae']:.6f}  "
-            f"MSE: {metrics.get('mse', 0):.6f}  "
-            f"RMSE: {metrics.get('rmse', 0):.6f}"
+            f"{prefix}MAE: ₹{metrics['mae']:.2f}  RMSE: ₹{metrics.get('rmse', 0):.2f}"
         )
-    
-    # Correlation
     if 'correlation' in metrics:
-        lines.append(
-            f"{prefix}Correlation: {metrics['correlation']:.4f}  "
-            f"Sharpe: {metrics.get('sharpe', 0):.4f}"
-        )
-    
-    # Volatility
-    if 'volatility_mae' in metrics:
-        lines.append(
-            f"{prefix}Vol MAE: {metrics['volatility_mae']:.6f}  "
-            f"Vol MSE: {metrics.get('volatility_mse', 0):.6f}"
-        )
-    
+        lines.append(f"{prefix}Correlation: {metrics['correlation']:.4f}")
     return "\n".join(lines)
 
 

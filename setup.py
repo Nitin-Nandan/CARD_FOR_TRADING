@@ -23,14 +23,7 @@ directories = [
     "data/raw",
     "data/market_indices",
     "data/processed",
-    "data/combined",
     "data/windows",
-    
-    # Model directories
-    "models/checkpoints",
-    
-    # Loss directories
-    "losses",
     
     # Script directories
     "scripts",
@@ -42,12 +35,18 @@ directories = [
     
     # Logs
     "logs",
+    "logs/reports",
     
-    # Notebooks
-    "notebooks",
+    # Documentation
+    "docs",
+    "docs/reference",
     
-    # Tests
-    "tests",
+    # Checkpoints
+    "checkpoints",
+    "checkpoints/fine_tuned",
+    
+    # Demo
+    "demo_ui",
 ]
 
 print("\nCreating directory structure...")
@@ -66,8 +65,6 @@ for directory in directories:
 # Create __init__.py files
 init_files = [
     "models/__init__.py",
-    "losses/__init__.py",
-    "tests/__init__.py",
 ]
 
 print("\nCreating __init__.py files...")
@@ -113,9 +110,9 @@ print("")
 print("  2. Setup Fyers credentials in .env")
 print("")
 print("  3. Generate access token:")
-print("     python scripts/00_generate_token.py")
+print("     python pipeline/00_generate_token.py")
 print("")
 print("  4. Download Nifty 50 data:")
-print("     python scripts/01_download_nifty50.py")
+print("     python pipeline/01_download_nifty50.py")
 print("")
 print("="*60)

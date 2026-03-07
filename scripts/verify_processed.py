@@ -32,7 +32,8 @@ from config_nifty50 import get_stock_symbols, symbol_to_name
 
 # Paths
 PROCESSED_DIR = PROJECT_ROOT / "data" / "processed"
-REPORT_PATH = PROJECT_ROOT / "data" / "processed_verification_report.txt"
+REPORT_PATH = PROJECT_ROOT / "logs" / "reports" / "processed_verification_report.txt"
+REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
 
 logger.remove()
 logger.add(sys.stdout, level="INFO")
