@@ -1,0 +1,2019 @@
+{
+    "summary": {
+        "total_stocks": 502,
+        "successful": 475,
+        "failed": 27,
+        "nifty_index_rows": 612371,
+        "totalDataRows": 262601334
+    },
+    "stock_details": {
+        "HDFCBANK": {
+            "status": "SUCCESS",
+            "rows": 615213
+        },
+        "ICICIBANK": {
+            "status": "SUCCESS",
+            "rows": 615224
+        },
+        "SBIN": {
+            "status": "SUCCESS",
+            "rows": 615302
+        },
+        "KOTAKBANK": {
+            "status": "SUCCESS",
+            "rows": 615292
+        },
+        "AXISBANK": {
+            "status": "SUCCESS",
+            "rows": 615308
+        },
+        "INDUSINDBK": {
+            "status": "SUCCESS",
+            "rows": 615211
+        },
+        "BANKBARODA": {
+            "status": "SUCCESS",
+            "rows": 615300
+        },
+        "PNB": {
+            "status": "SUCCESS",
+            "rows": 615302
+        },
+        "CANBK": {
+            "status": "SUCCESS",
+            "rows": 615295
+        },
+        "UNIONBANK": {
+            "status": "SUCCESS",
+            "rows": 615296
+        },
+        "IDFCFIRSTB": {
+            "status": "SUCCESS",
+            "rows": 615220
+        },
+        "FEDERALBNK": {
+            "status": "SUCCESS",
+            "rows": 615224
+        },
+        "RBLBANK": {
+            "status": "SUCCESS",
+            "rows": 615288
+        },
+        "YESBANK": {
+            "status": "SUCCESS",
+            "rows": 615301
+        },
+        "KARURVYSYA": {
+            "status": "SUCCESS",
+            "rows": 614553
+        },
+        "CUB": {
+            "status": "SUCCESS",
+            "rows": 613854
+        },
+        "DCBBANK": {
+            "status": "SUCCESS",
+            "rows": 615119
+        },
+        "SOUTHBANK": {
+            "status": "SUCCESS",
+            "rows": 615279
+        },
+        "BANDHANBNK": {
+            "status": "SUCCESS",
+            "rows": 547251
+        },
+        "AUBANK": {
+            "status": "SUCCESS",
+            "rows": 611844
+        },
+        "EQUITASBNK": {
+            "status": "SUCCESS",
+            "rows": 385420
+        },
+        "UJJIVANSFB": {
+            "status": "SUCCESS",
+            "rows": 390332
+        },
+        "SURYODAY": {
+            "status": "SUCCESS",
+            "rows": 382324
+        },
+        "BAJFINANCE": {
+            "status": "SUCCESS",
+            "rows": 615295
+        },
+        "BAJAJFINSV": {
+            "status": "SUCCESS",
+            "rows": 615283
+        },
+        "SHRIRAMFIN": {
+            "status": "SUCCESS",
+            "rows": 615284
+        },
+        "CHOLAFIN": {
+            "status": "SUCCESS",
+            "rows": 615184
+        },
+        "MUTHOOTFIN": {
+            "status": "SUCCESS",
+            "rows": 615232
+        },
+        "M&MFIN": {
+            "status": "SUCCESS",
+            "rows": 615290
+        },
+        "LICHSGFIN": {
+            "status": "SUCCESS",
+            "rows": 615299
+        },
+        "PNBHOUSING": {
+            "status": "SUCCESS",
+            "rows": 614029
+        },
+        "CANFINHOME": {
+            "status": "SUCCESS",
+            "rows": 615096
+        },
+        "RECLTD": {
+            "status": "SUCCESS",
+            "rows": 615301
+        },
+        "PFC": {
+            "status": "SUCCESS",
+            "rows": 615300
+        },
+        "SUNDARMFIN": {
+            "status": "SUCCESS",
+            "rows": 587397
+        },
+        "MANAPPURAM": {
+            "status": "SUCCESS",
+            "rows": 615292
+        },
+        "IIFL": {
+            "status": "SUCCESS",
+            "rows": 608555
+        },
+        "ABCAPITAL": {
+            "status": "SUCCESS",
+            "rows": 599313
+        },
+        "POONAWALLA": {
+            "status": "SUCCESS",
+            "rows": 585782
+        },
+        "CREDITACC": {
+            "status": "SUCCESS",
+            "rows": 505890
+        },
+        "UGROCAP": {
+            "status": "SUCCESS",
+            "rows": 368245
+        },
+        "HDFCLIFE": {
+            "status": "SUCCESS",
+            "rows": 580138
+        },
+        "SBILIFE": {
+            "status": "SUCCESS",
+            "rows": 591657
+        },
+        "ICICIPRULI": {
+            "status": "SUCCESS",
+            "rows": 615209
+        },
+        "ICICIGI": {
+            "status": "SUCCESS",
+            "rows": 592595
+        },
+        "GICRE": {
+            "status": "SUCCESS",
+            "rows": 582784
+        },
+        "NIACL": {
+            "status": "SUCCESS",
+            "rows": 571792
+        },
+        "STARHEALTH": {
+            "status": "SUCCESS",
+            "rows": 385440
+        },
+        "HDFCAMC": {
+            "status": "SUCCESS",
+            "rows": 513099
+        },
+        "NAM-INDIA": {
+            "status": "SUCCESS",
+            "rows": 385498
+        },
+        "ANGELONE": {
+            "status": "SUCCESS",
+            "rows": 385562
+        },
+        "BSE": {
+            "status": "SUCCESS",
+            "rows": 614287
+        },
+        "MCX": {
+            "status": "SUCCESS",
+            "rows": 615264
+        },
+        "CDSL": {
+            "status": "SUCCESS",
+            "rows": 613548
+        },
+        "CAMS": {
+            "status": "SUCCESS",
+            "rows": 385562
+        },
+        "360ONE": {
+            "status": "SUCCESS",
+            "rows": 402352
+        },
+        "MOTILALOFS": {
+            "status": "SUCCESS",
+            "rows": 609308
+        },
+        "IIFLSEC": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "TCS": {
+            "status": "SUCCESS",
+            "rows": 615281
+        },
+        "INFY": {
+            "status": "SUCCESS",
+            "rows": 615228
+        },
+        "HCLTECH": {
+            "status": "SUCCESS",
+            "rows": 615208
+        },
+        "WIPRO": {
+            "status": "SUCCESS",
+            "rows": 615292
+        },
+        "TECHM": {
+            "status": "SUCCESS",
+            "rows": 615288
+        },
+        "LTIMINDTREE": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "MPHASIS": {
+            "status": "SUCCESS",
+            "rows": 612593
+        },
+        "COFORGE": {
+            "status": "SUCCESS",
+            "rows": 615226
+        },
+        "PERSISTENT": {
+            "status": "SUCCESS",
+            "rows": 611911
+        },
+        "OFSS": {
+            "status": "SUCCESS",
+            "rows": 611516
+        },
+        "HEXAWARE": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "KPITTECH": {
+            "status": "SUCCESS",
+            "rows": 445276
+        },
+        "TATAELXSI": {
+            "status": "SUCCESS",
+            "rows": 615280
+        },
+        "LTTS": {
+            "status": "SUCCESS",
+            "rows": 610667
+        },
+        "SONATSOFTW": {
+            "status": "SUCCESS",
+            "rows": 612954
+        },
+        "MASTEK": {
+            "status": "SUCCESS",
+            "rows": 607115
+        },
+        "CYIENT": {
+            "status": "SUCCESS",
+            "rows": 610627
+        },
+        "RATEGAIN": {
+            "status": "SUCCESS",
+            "rows": 385118
+        },
+        "NEWGEN": {
+            "status": "SUCCESS",
+            "rows": 526252
+        },
+        "INTELLECT": {
+            "status": "SUCCESS",
+            "rows": 611414
+        },
+        "ROUTE": {
+            "status": "SUCCESS",
+            "rows": 385531
+        },
+        "TANLA": {
+            "status": "SUCCESS",
+            "rows": 565419
+        },
+        "HAPPSTMNDS": {
+            "status": "SUCCESS",
+            "rows": 385556
+        },
+        "MSTCLTD": {
+            "status": "SUCCESS",
+            "rows": 435465
+        },
+        "RELIANCE": {
+            "status": "SUCCESS",
+            "rows": 615277
+        },
+        "ONGC": {
+            "status": "SUCCESS",
+            "rows": 615304
+        },
+        "BPCL": {
+            "status": "SUCCESS",
+            "rows": 615294
+        },
+        "IOC": {
+            "status": "SUCCESS",
+            "rows": 615218
+        },
+        "HINDPETRO": {
+            "status": "SUCCESS",
+            "rows": 615219
+        },
+        "GAIL": {
+            "status": "SUCCESS",
+            "rows": 615217
+        },
+        "PETRONET": {
+            "status": "SUCCESS",
+            "rows": 615304
+        },
+        "IGL": {
+            "status": "SUCCESS",
+            "rows": 615205
+        },
+        "MGL": {
+            "status": "SUCCESS",
+            "rows": 615251
+        },
+        "GUJGASLTD": {
+            "status": "SUCCESS",
+            "rows": 601187
+        },
+        "CASTROLIND": {
+            "status": "SUCCESS",
+            "rows": 615244
+        },
+        "OIL": {
+            "status": "SUCCESS",
+            "rows": 615243
+        },
+        "MRPL": {
+            "status": "SUCCESS",
+            "rows": 613724
+        },
+        "CHENNPETRO": {
+            "status": "SUCCESS",
+            "rows": 613662
+        },
+        "NTPC": {
+            "status": "SUCCESS",
+            "rows": 615299
+        },
+        "POWERGRID": {
+            "status": "SUCCESS",
+            "rows": 615303
+        },
+        "COALINDIA": {
+            "status": "SUCCESS",
+            "rows": 615298
+        },
+        "ADANIGREEN": {
+            "status": "SUCCESS",
+            "rows": 523395
+        },
+        "ADANIPOWER": {
+            "status": "SUCCESS",
+            "rows": 615293
+        },
+        "TATAPOWER": {
+            "status": "SUCCESS",
+            "rows": 615288
+        },
+        "CESC": {
+            "status": "SUCCESS",
+            "rows": 615227
+        },
+        "NHPC": {
+            "status": "SUCCESS",
+            "rows": 615075
+        },
+        "SJVN": {
+            "status": "SUCCESS",
+            "rows": 609687
+        },
+        "TORNTPOWER": {
+            "status": "SUCCESS",
+            "rows": 615208
+        },
+        "JSWENERGY": {
+            "status": "SUCCESS",
+            "rows": 613383
+        },
+        "SUZLON": {
+            "status": "SUCCESS",
+            "rows": 615299
+        },
+        "INOXWIND": {
+            "status": "SUCCESS",
+            "rows": 587458
+        },
+        "KPIL": {
+            "status": "SUCCESS",
+            "rows": 602485
+        },
+        "GPPL": {
+            "status": "SUCCESS",
+            "rows": 601117
+        },
+        "MARUTI": {
+            "status": "SUCCESS",
+            "rows": 615294
+        },
+        "M&M": {
+            "status": "SUCCESS",
+            "rows": 615294
+        },
+        "BAJAJ-AUTO": {
+            "status": "SUCCESS",
+            "rows": 615286
+        },
+        "HEROMOTOCO": {
+            "status": "SUCCESS",
+            "rows": 615206
+        },
+        "EICHERMOT": {
+            "status": "SUCCESS",
+            "rows": 615204
+        },
+        "TVSMOTOR": {
+            "status": "SUCCESS",
+            "rows": 615285
+        },
+        "ASHOKLEY": {
+            "status": "SUCCESS",
+            "rows": 615304
+        },
+        "BOSCHLTD": {
+            "status": "SUCCESS",
+            "rows": 615163
+        },
+        "MOTHERSON": {
+            "status": "SUCCESS",
+            "rows": 614884
+        },
+        "BHARATFORG": {
+            "status": "SUCCESS",
+            "rows": 615295
+        },
+        "APOLLOTYRE": {
+            "status": "SUCCESS",
+            "rows": 615292
+        },
+        "MRF": {
+            "status": "SUCCESS",
+            "rows": 615156
+        },
+        "CEATLTD": {
+            "status": "SUCCESS",
+            "rows": 615004
+        },
+        "BALKRISIND": {
+            "status": "SUCCESS",
+            "rows": 615216
+        },
+        "SUNDRMFAST": {
+            "status": "SUCCESS",
+            "rows": 609871
+        },
+        "EXIDEIND": {
+            "status": "SUCCESS",
+            "rows": 615220
+        },
+        "AMARARAJA": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "UNOMINDA": {
+            "status": "SUCCESS",
+            "rows": 611846
+        },
+        "SUPRAJIT": {
+            "status": "SUCCESS",
+            "rows": 574943
+        },
+        "CRAFTSMAN": {
+            "status": "SUCCESS",
+            "rows": 384346
+        },
+        "OLECTRA": {
+            "status": "SUCCESS",
+            "rows": 559522
+        },
+        "HINDUNILVR": {
+            "status": "SUCCESS",
+            "rows": 615197
+        },
+        "ITC": {
+            "status": "SUCCESS",
+            "rows": 615198
+        },
+        "NESTLEIND": {
+            "status": "SUCCESS",
+            "rows": 615069
+        },
+        "BRITANNIA": {
+            "status": "SUCCESS",
+            "rows": 615277
+        },
+        "DABUR": {
+            "status": "SUCCESS",
+            "rows": 615282
+        },
+        "GODREJCP": {
+            "status": "SUCCESS",
+            "rows": 615201
+        },
+        "MARICO": {
+            "status": "SUCCESS",
+            "rows": 615269
+        },
+        "COLPAL": {
+            "status": "SUCCESS",
+            "rows": 615273
+        },
+        "EMAMILTD": {
+            "status": "SUCCESS",
+            "rows": 613964
+        },
+        "TATACONSUM": {
+            "status": "SUCCESS",
+            "rows": 615287
+        },
+        "VBL": {
+            "status": "SUCCESS",
+            "rows": 599235
+        },
+        "RADICO": {
+            "status": "SUCCESS",
+            "rows": 614946
+        },
+        "UBL": {
+            "status": "SUCCESS",
+            "rows": 615151
+        },
+        "UNITDSPR": {
+            "status": "SUCCESS",
+            "rows": 615295
+        },
+        "ZYDUSWELL": {
+            "status": "SUCCESS",
+            "rows": 571444
+        },
+        "JYOTHYLAB": {
+            "status": "SUCCESS",
+            "rows": 604866
+        },
+        "PGHH": {
+            "status": "SUCCESS",
+            "rows": 588273
+        },
+        "GILLETTE": {
+            "status": "SUCCESS",
+            "rows": 580784
+        },
+        "BIKAJI": {
+            "status": "SUCCESS",
+            "rows": 305183
+        },
+        "TITAN": {
+            "status": "SUCCESS",
+            "rows": 615280
+        },
+        "ASIANPAINT": {
+            "status": "SUCCESS",
+            "rows": 615291
+        },
+        "TRENT": {
+            "status": "SUCCESS",
+            "rows": 609817
+        },
+        "DMART": {
+            "status": "SUCCESS",
+            "rows": 615299
+        },
+        "NAUKRI": {
+            "status": "SUCCESS",
+            "rows": 608919
+        },
+        "JUBLFOOD": {
+            "status": "SUCCESS",
+            "rows": 615216
+        },
+        "ABFRL": {
+            "status": "SUCCESS",
+            "rows": 613922
+        },
+        "PAGEIND": {
+            "status": "SUCCESS",
+            "rows": 614993
+        },
+        "VSTIND": {
+            "status": "SUCCESS",
+            "rows": 547563
+        },
+        "INDIAMART": {
+            "status": "SUCCESS",
+            "rows": 428399
+        },
+        "BATAINDIA": {
+            "status": "SUCCESS",
+            "rows": 615288
+        },
+        "RELAXO": {
+            "status": "SUCCESS",
+            "rows": 595750
+        },
+        "SHOPERSTOP": {
+            "status": "SUCCESS",
+            "rows": 581222
+        },
+        "VMART": {
+            "status": "SUCCESS",
+            "rows": 593773
+        },
+        "CAMPUS": {
+            "status": "SUCCESS",
+            "rows": 354048
+        },
+        "PCBL": {
+            "status": "SUCCESS",
+            "rows": 382524
+        },
+        "SUNPHARMA": {
+            "status": "SUCCESS",
+            "rows": 615292
+        },
+        "DRREDDY": {
+            "status": "SUCCESS",
+            "rows": 615285
+        },
+        "CIPLA": {
+            "status": "SUCCESS",
+            "rows": 615292
+        },
+        "DIVISLAB": {
+            "status": "SUCCESS",
+            "rows": 615283
+        },
+        "AUROPHARMA": {
+            "status": "SUCCESS",
+            "rows": 615297
+        },
+        "BIOCON": {
+            "status": "SUCCESS",
+            "rows": 615293
+        },
+        "TORNTPHARM": {
+            "status": "SUCCESS",
+            "rows": 615078
+        },
+        "LUPIN": {
+            "status": "SUCCESS",
+            "rows": 615297
+        },
+        "ALKEM": {
+            "status": "SUCCESS",
+            "rows": 607033
+        },
+        "ABBOTINDIA": {
+            "status": "SUCCESS",
+            "rows": 592330
+        },
+        "GLENMARK": {
+            "status": "SUCCESS",
+            "rows": 615206
+        },
+        "ZYDUSLIFE": {
+            "status": "SUCCESS",
+            "rows": 615280
+        },
+        "IPCALAB": {
+            "status": "SUCCESS",
+            "rows": 612962
+        },
+        "LALPATHLAB": {
+            "status": "SUCCESS",
+            "rows": 609573
+        },
+        "METROPOLIS": {
+            "status": "SUCCESS",
+            "rows": 444901
+        },
+        "APOLLOHOSP": {
+            "status": "SUCCESS",
+            "rows": 615270
+        },
+        "MAXHEALTH": {
+            "status": "SUCCESS",
+            "rows": 385541
+        },
+        "FORTIS": {
+            "status": "SUCCESS",
+            "rows": 612586
+        },
+        "NH": {
+            "status": "SUCCESS",
+            "rows": 575268
+        },
+        "SUVEN": {
+            "status": "SUCCESS",
+            "rows": 602109
+        },
+        "GRANULES": {
+            "status": "SUCCESS",
+            "rows": 614839
+        },
+        "SOLARA": {
+            "status": "SUCCESS",
+            "rows": 495752
+        },
+        "SYNGENE": {
+            "status": "SUCCESS",
+            "rows": 607769
+        },
+        "ALKYLAMINE": {
+            "status": "SUCCESS",
+            "rows": 517348
+        },
+        "NATCOPHARM": {
+            "status": "SUCCESS",
+            "rows": 613350
+        },
+        "TATASTEEL": {
+            "status": "SUCCESS",
+            "rows": 615297
+        },
+        "HINDALCO": {
+            "status": "SUCCESS",
+            "rows": 615220
+        },
+        "JSWSTEEL": {
+            "status": "SUCCESS",
+            "rows": 615220
+        },
+        "SAIL": {
+            "status": "SUCCESS",
+            "rows": 615294
+        },
+        "VEDL": {
+            "status": "SUCCESS",
+            "rows": 615296
+        },
+        "NATIONALUM": {
+            "status": "SUCCESS",
+            "rows": 615289
+        },
+        "NMDC": {
+            "status": "SUCCESS",
+            "rows": 615273
+        },
+        "MOIL": {
+            "status": "SUCCESS",
+            "rows": 611923
+        },
+        "HINDCOPPER": {
+            "status": "SUCCESS",
+            "rows": 613940
+        },
+        "WELCORP": {
+            "status": "SUCCESS",
+            "rows": 611884
+        },
+        "APLAPOLLO": {
+            "status": "SUCCESS",
+            "rows": 590365
+        },
+        "RATNAMANI": {
+            "status": "SUCCESS",
+            "rows": 551547
+        },
+        "JINDALSAW": {
+            "status": "SUCCESS",
+            "rows": 612417
+        },
+        "JSWHL": {
+            "status": "SUCCESS",
+            "rows": 494624
+        },
+        "ULTRACEMCO": {
+            "status": "SUCCESS",
+            "rows": 615282
+        },
+        "GRASIM": {
+            "status": "SUCCESS",
+            "rows": 615184
+        },
+        "AMBUJACEM": {
+            "status": "SUCCESS",
+            "rows": 615288
+        },
+        "ACC": {
+            "status": "SUCCESS",
+            "rows": 615285
+        },
+        "SHREECEM": {
+            "status": "SUCCESS",
+            "rows": 614957
+        },
+        "RAMCOCEM": {
+            "status": "SUCCESS",
+            "rows": 614878
+        },
+        "JKCEMENT": {
+            "status": "SUCCESS",
+            "rows": 600160
+        },
+        "HEIDELBERG": {
+            "status": "SUCCESS",
+            "rows": 605799
+        },
+        "ORIENTCEM": {
+            "status": "SUCCESS",
+            "rows": 584704
+        },
+        "NUVOCO": {
+            "status": "SUCCESS",
+            "rows": 384636
+        },
+        "LT": {
+            "status": "SUCCESS",
+            "rows": 615303
+        },
+        "NCC": {
+            "status": "SUCCESS",
+            "rows": 615306
+        },
+        "HCC": {
+            "status": "SUCCESS",
+            "rows": 470892
+        },
+        "AHLUCONT": {
+            "status": "SUCCESS",
+            "rows": 517367
+        },
+        "KNRCON": {
+            "status": "SUCCESS",
+            "rows": 602960
+        },
+        "PNC": {
+            "status": "SUCCESS",
+            "rows": 358915
+        },
+        "PRAJIND": {
+            "status": "SUCCESS",
+            "rows": 614385
+        },
+        "IRB": {
+            "status": "SUCCESS",
+            "rows": 615165
+        },
+        "ASHIANA": {
+            "status": "SUCCESS",
+            "rows": 543883
+        },
+        "SUNTECK": {
+            "status": "SUCCESS",
+            "rows": 601573
+        },
+        "OBEROIRLTY": {
+            "status": "SUCCESS",
+            "rows": 613768
+        },
+        "GODREJPROP": {
+            "status": "SUCCESS",
+            "rows": 613945
+        },
+        "DLF": {
+            "status": "SUCCESS",
+            "rows": 615288
+        },
+        "PRESTIGE": {
+            "status": "SUCCESS",
+            "rows": 534182
+        },
+        "PHOENIXLTD": {
+            "status": "SUCCESS",
+            "rows": 598361
+        },
+        "BRIGADE": {
+            "status": "SUCCESS",
+            "rows": 592629
+        },
+        "SOBHA": {
+            "status": "SUCCESS",
+            "rows": 613987
+        },
+        "MAHLIFE": {
+            "status": "SUCCESS",
+            "rows": 584867
+        },
+        "NBCC": {
+            "status": "SUCCESS",
+            "rows": 615297
+        },
+        "RITES": {
+            "status": "SUCCESS",
+            "rows": 521961
+        },
+        "IRCON": {
+            "status": "SUCCESS",
+            "rows": 491740
+        },
+        "BHARTIARTL": {
+            "status": "SUCCESS",
+            "rows": 615299
+        },
+        "INDUSTOWER": {
+            "status": "SUCCESS",
+            "rows": 615212
+        },
+        "TATACOMM": {
+            "status": "SUCCESS",
+            "rows": 612733
+        },
+        "STLTECH": {
+            "status": "SUCCESS",
+            "rows": 385479
+        },
+        "HFCL": {
+            "status": "SUCCESS",
+            "rows": 612060
+        },
+        "TEJASNET": {
+            "status": "SUCCESS",
+            "rows": 601809
+        },
+        "BEL": {
+            "status": "SUCCESS",
+            "rows": 615296
+        },
+        "HAL": {
+            "status": "SUCCESS",
+            "rows": 534949
+        },
+        "BDL": {
+            "status": "SUCCESS",
+            "rows": 535725
+        },
+        "COCHINSHIP": {
+            "status": "SUCCESS",
+            "rows": 600996
+        },
+        "MAZDOCK": {
+            "status": "SUCCESS",
+            "rows": 385427
+        },
+        "GRSE": {
+            "status": "SUCCESS",
+            "rows": 476186
+        },
+        "BEML": {
+            "status": "SUCCESS",
+            "rows": 615108
+        },
+        "MIDHANI": {
+            "status": "SUCCESS",
+            "rows": 534872
+        },
+        "PARAS": {
+            "status": "SUCCESS",
+            "rows": 385506
+        },
+        "DATAPATTNS": {
+            "status": "SUCCESS",
+            "rows": 385507
+        },
+        "INDIGO": {
+            "status": "SUCCESS",
+            "rows": 615212
+        },
+        "BLUEDART": {
+            "status": "SUCCESS",
+            "rows": 577784
+        },
+        "CONCOR": {
+            "status": "SUCCESS",
+            "rows": 615232
+        },
+        "MAHLOG": {
+            "status": "SUCCESS",
+            "rows": 558747
+        },
+        "GATI": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "TCI": {
+            "status": "SUCCESS",
+            "rows": 574021
+        },
+        "ALLCARGO": {
+            "status": "SUCCESS",
+            "rows": 606308
+        },
+        "ADANIENT": {
+            "status": "SUCCESS",
+            "rows": 615220
+        },
+        "ADANIPORTS": {
+            "status": "SUCCESS",
+            "rows": 615292
+        },
+        "ADANIENSOL": {
+            "status": "SUCCESS",
+            "rows": 607011
+        },
+        "PIDILITIND": {
+            "status": "SUCCESS",
+            "rows": 615287
+        },
+        "SRF": {
+            "status": "SUCCESS",
+            "rows": 615169
+        },
+        "ATUL": {
+            "status": "SUCCESS",
+            "rows": 593426
+        },
+        "NAVINFLUOR": {
+            "status": "SUCCESS",
+            "rows": 602641
+        },
+        "DEEPAKNTR": {
+            "status": "SUCCESS",
+            "rows": 611288
+        },
+        "FINEORG": {
+            "status": "SUCCESS",
+            "rows": 501346
+        },
+        "GALAXYSURF": {
+            "status": "SUCCESS",
+            "rows": 520490
+        },
+        "CLEAN": {
+            "status": "SUCCESS",
+            "rows": 385536
+        },
+        "TATACHEM": {
+            "status": "SUCCESS",
+            "rows": 615277
+        },
+        "GNFC": {
+            "status": "SUCCESS",
+            "rows": 615005
+        },
+        "COROMANDEL": {
+            "status": "SUCCESS",
+            "rows": 611503
+        },
+        "CHAMBLFERT": {
+            "status": "SUCCESS",
+            "rows": 612143
+        },
+        "GSFC": {
+            "status": "SUCCESS",
+            "rows": 614260
+        },
+        "VINATIORGA": {
+            "status": "SUCCESS",
+            "rows": 595325
+        },
+        "SUMICHEM": {
+            "status": "SUCCESS",
+            "rows": 385540
+        },
+        "FLUOROCHEM": {
+            "status": "SUCCESS",
+            "rows": 399313
+        },
+        "BAYERCROP": {
+            "status": "SUCCESS",
+            "rows": 589738
+        },
+        "PIIND": {
+            "status": "SUCCESS",
+            "rows": 611136
+        },
+        "UPL": {
+            "status": "SUCCESS",
+            "rows": 615290
+        },
+        "DHANUKA": {
+            "status": "SUCCESS",
+            "rows": 570010
+        },
+        "LXCHEM": {
+            "status": "SUCCESS",
+            "rows": 385563
+        },
+        "ASAHIINDIA": {
+            "status": "SUCCESS",
+            "rows": 547358
+        },
+        "NOCIL": {
+            "status": "SUCCESS",
+            "rows": 614782
+        },
+        "RAYMOND": {
+            "status": "SUCCESS",
+            "rows": 615211
+        },
+        "TRIDENT": {
+            "status": "SUCCESS",
+            "rows": 614172
+        },
+        "VTL": {
+            "status": "SUCCESS",
+            "rows": 590863
+        },
+        "WELSPUNIND": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "ARVIND": {
+            "status": "SUCCESS",
+            "rows": 615102
+        },
+        "KPRMILL": {
+            "status": "SUCCESS",
+            "rows": 577421
+        },
+        "GARFIBRES": {
+            "status": "SUCCESS",
+            "rows": 548171
+        },
+        "SIEMENS": {
+            "status": "SUCCESS",
+            "rows": 615233
+        },
+        "ABB": {
+            "status": "SUCCESS",
+            "rows": 612818
+        },
+        "HAVELLS": {
+            "status": "SUCCESS",
+            "rows": 615208
+        },
+        "HONAUT": {
+            "status": "SUCCESS",
+            "rows": 570623
+        },
+        "BHEL": {
+            "status": "SUCCESS",
+            "rows": 615305
+        },
+        "CUMMINSIND": {
+            "status": "SUCCESS",
+            "rows": 615168
+        },
+        "THERMAX": {
+            "status": "SUCCESS",
+            "rows": 600652
+        },
+        "AIAENG": {
+            "status": "SUCCESS",
+            "rows": 597570
+        },
+        "GRINDWELL": {
+            "status": "SUCCESS",
+            "rows": 567208
+        },
+        "CARBORUNIV": {
+            "status": "SUCCESS",
+            "rows": 592485
+        },
+        "SKFINDIA": {
+            "status": "SUCCESS",
+            "rows": 569240
+        },
+        "TIMKEN": {
+            "status": "SUCCESS",
+            "rows": 586585
+        },
+        "ELGIEQUIP": {
+            "status": "SUCCESS",
+            "rows": 541408
+        },
+        "KSB": {
+            "status": "SUCCESS",
+            "rows": 533318
+        },
+        "VOLTAMP": {
+            "status": "SUCCESS",
+            "rows": 559341
+        },
+        "CGPOWER": {
+            "status": "SUCCESS",
+            "rows": 614404
+        },
+        "INOXINDIA": {
+            "status": "SUCCESS",
+            "rows": 203177
+        },
+        "KAYNES": {
+            "status": "SUCCESS",
+            "rows": 303720
+        },
+        "VIPIND": {
+            "status": "SUCCESS",
+            "rows": 614694
+        },
+        "ESCORTS": {
+            "status": "SUCCESS",
+            "rows": 615206
+        },
+        "TEXRAIL": {
+            "status": "SUCCESS",
+            "rows": 600419
+        },
+        "RVNL": {
+            "status": "SUCCESS",
+            "rows": 450812
+        },
+        "IRFC": {
+            "status": "SUCCESS",
+            "rows": 385557
+        },
+        "TITAGARH": {
+            "status": "SUCCESS",
+            "rows": 610972
+        },
+        "ISGEC": {
+            "status": "SUCCESS",
+            "rows": 380241
+        },
+        "ZEEL": {
+            "status": "SUCCESS",
+            "rows": 615298
+        },
+        "SUNTV": {
+            "status": "SUCCESS",
+            "rows": 615277
+        },
+        "PVRINOX": {
+            "status": "SUCCESS",
+            "rows": 615235
+        },
+        "WONDERLA": {
+            "status": "SUCCESS",
+            "rows": 567751
+        },
+        "TIPSFILMS": {
+            "status": "SUCCESS",
+            "rows": 288965
+        },
+        "SAREGAMA": {
+            "status": "SUCCESS",
+            "rows": 579565
+        },
+        "JAGRAN": {
+            "status": "SUCCESS",
+            "rows": 580447
+        },
+        "DBCORP": {
+            "status": "SUCCESS",
+            "rows": 578187
+        },
+        "VOLTAS": {
+            "status": "SUCCESS",
+            "rows": 615284
+        },
+        "BLUESTARCO": {
+            "status": "SUCCESS",
+            "rows": 600931
+        },
+        "CROMPTON": {
+            "status": "SUCCESS",
+            "rows": 614915
+        },
+        "BAJAJELE": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "RAJESHEXPO": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "ORIENTELEC": {
+            "status": "SUCCESS",
+            "rows": 515078
+        },
+        "AMBER": {
+            "status": "SUCCESS",
+            "rows": 538394
+        },
+        "DIXON": {
+            "status": "SUCCESS",
+            "rows": 581405
+        },
+        "WHIRLPOOL": {
+            "status": "SUCCESS",
+            "rows": 606972
+        },
+        "KALYANKJIL": {
+            "status": "SUCCESS",
+            "rows": 385459
+        },
+        "SENCO": {
+            "status": "SUCCESS",
+            "rows": 243726
+        },
+        "KIMS": {
+            "status": "SUCCESS",
+            "rows": 383616
+        },
+        "RAINBOW": {
+            "status": "SUCCESS",
+            "rows": 353524
+        },
+        "ERIS": {
+            "status": "SUCCESS",
+            "rows": 587634
+        },
+        "THYROCARE": {
+            "status": "SUCCESS",
+            "rows": 584180
+        },
+        "KRSNAA": {
+            "status": "SUCCESS",
+            "rows": 382176
+        },
+        "VIJAYA": {
+            "status": "SUCCESS",
+            "rows": 383621
+        },
+        "IEX": {
+            "status": "SUCCESS",
+            "rows": 568501
+        },
+        "IRCTC": {
+            "status": "SUCCESS",
+            "rows": 405461
+        },
+        "NYKAA": {
+            "status": "SUCCESS",
+            "rows": 385564
+        },
+        "POLICYBZR": {
+            "status": "SUCCESS",
+            "rows": 385561
+        },
+        "CARTRADE": {
+            "status": "SUCCESS",
+            "rows": 385320
+        },
+        "JUSTDIAL": {
+            "status": "SUCCESS",
+            "rows": 615113
+        },
+        "AFFLE": {
+            "status": "SUCCESS",
+            "rows": 420426
+        },
+        "INDIGOPNTS": {
+            "status": "SUCCESS",
+            "rows": 384845
+        },
+        "EPIGRAL": {
+            "status": "SUCCESS",
+            "rows": 384037
+        },
+        "SIGNATURE": {
+            "status": "SUCCESS",
+            "rows": 224432
+        },
+        "GMRAIRPORT": {
+            "status": "SUCCESS",
+            "rows": 615142
+        },
+        "AMIORG": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "TATAINVEST": {
+            "status": "SUCCESS",
+            "rows": 591070
+        },
+        "KFINTECH": {
+            "status": "SUCCESS",
+            "rows": 293461
+        },
+        "GPIL": {
+            "status": "SUCCESS",
+            "rows": 583431
+        },
+        "NESCO": {
+            "status": "SUCCESS",
+            "rows": 571579
+        },
+        "NAZARA": {
+            "status": "SUCCESS",
+            "rows": 385542
+        },
+        "LATENTVIEW": {
+            "status": "SUCCESS",
+            "rows": 385546
+        },
+        "MTAR": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "AAVAS": {
+            "status": "SUCCESS",
+            "rows": 490187
+        },
+        "HOMEFIRST": {
+            "status": "SUCCESS",
+            "rows": 384436
+        },
+        "APTUS": {
+            "status": "SUCCESS",
+            "rows": 384760
+        },
+        "REPCOHOME": {
+            "status": "SUCCESS",
+            "rows": 608540
+        },
+        "AADHARHFC": {
+            "status": "SUCCESS",
+            "rows": 167072
+        },
+        "MFSL": {
+            "status": "SUCCESS",
+            "rows": 615214
+        },
+        "FUSION": {
+            "status": "SUCCESS",
+            "rows": 305526
+        },
+        "BERGEPAINT": {
+            "status": "SUCCESS",
+            "rows": 615199
+        },
+        "KANSAINER": {
+            "status": "SUCCESS",
+            "rows": 612048
+        },
+        "AKZOINDIA": {
+            "status": "SUCCESS",
+            "rows": 576698
+        },
+        "BALRAMCHIN": {
+            "status": "SUCCESS",
+            "rows": 615268
+        },
+        "RENUKA": {
+            "status": "SUCCESS",
+            "rows": 603707
+        },
+        "TRIVENI": {
+            "status": "SUCCESS",
+            "rows": 608905
+        },
+        "DHAMPURSUG": {
+            "status": "SUCCESS",
+            "rows": 613336
+        },
+        "EIDPARRY": {
+            "status": "SUCCESS",
+            "rows": 605463
+        },
+        "AVANTIFEED": {
+            "status": "SUCCESS",
+            "rows": 614769
+        },
+        "KRBL": {
+            "status": "SUCCESS",
+            "rows": 606599
+        },
+        "DEVYANI": {
+            "status": "SUCCESS",
+            "rows": 385557
+        },
+        "TNPL": {
+            "status": "SUCCESS",
+            "rows": 593522
+        },
+        "JKPAPER": {
+            "status": "SUCCESS",
+            "rows": 614544
+        },
+        "WSTCSTPAPR": {
+            "status": "SUCCESS",
+            "rows": 605262
+        },
+        "HUHTAMAKI": {
+            "status": "SUCCESS",
+            "rows": 374414
+        },
+        "MOLDTKPAC": {
+            "status": "SUCCESS",
+            "rows": 564329
+        },
+        "UFLEX": {
+            "status": "SUCCESS",
+            "rows": 601798
+        },
+        "TDPOWERSYS": {
+            "status": "SUCCESS",
+            "rows": 514014
+        },
+        "MMTC": {
+            "status": "SUCCESS",
+            "rows": 612275
+        },
+        "PCJEWELLER": {
+            "status": "SUCCESS",
+            "rows": 103936
+        },
+        "THANGAMAYL": {
+            "status": "SUCCESS",
+            "rows": 490961
+        },
+        "ZENSARTECH": {
+            "status": "SUCCESS",
+            "rows": 592413
+        },
+        "NIIT": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "BIRLASOFT": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "BSOFT": {
+            "status": "SUCCESS",
+            "rows": 614221
+        },
+        "SUBEXLTD": {
+            "status": "SUCCESS",
+            "rows": 385462
+        },
+        "NUCLEUS": {
+            "status": "SUCCESS",
+            "rows": 561328
+        },
+        "INFOBEAN": {
+            "status": "SUCCESS",
+            "rows": 396249
+        },
+        "SAKSOFT": {
+            "status": "SUCCESS",
+            "rows": 506493
+        },
+        "ECLERX": {
+            "status": "SUCCESS",
+            "rows": 589037
+        },
+        "TATATECH": {
+            "status": "SUCCESS",
+            "rows": 208802
+        },
+        "QUICKHEAL": {
+            "status": "SUCCESS",
+            "rows": 599708
+        },
+        "SAKUMA": {
+            "status": "SUCCESS",
+            "rows": 543581
+        },
+        "INFIBEAM": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "RAMKY": {
+            "status": "SUCCESS",
+            "rows": 567245
+        },
+        "BAJAJHFL": {
+            "status": "SUCCESS",
+            "rows": 135467
+        },
+        "EDELWEISS": {
+            "status": "SUCCESS",
+            "rows": 614907
+        },
+        "IBULHSGFIN": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "INDIAGLYCO": {
+            "status": "SUCCESS",
+            "rows": 602247
+        },
+        "APTECHT": {
+            "status": "SUCCESS",
+            "rows": 611255
+        },
+        "BIRLACORPN": {
+            "status": "SUCCESS",
+            "rows": 601819
+        },
+        "SPANDANA": {
+            "status": "SUCCESS",
+            "rows": 410702
+        },
+        "FIVESTAR": {
+            "status": "SUCCESS",
+            "rows": 303499
+        },
+        "POLYMED": {
+            "status": "SUCCESS",
+            "rows": 506131
+        },
+        "ASTERDM": {
+            "status": "SUCCESS",
+            "rows": 536118
+        },
+        "MEDANTA": {
+            "status": "SUCCESS",
+            "rows": 305234
+        },
+        "HEALTHCARE": {
+            "status": "SUCCESS",
+            "rows": 3739
+        },
+        "SUPRIYA": {
+            "status": "SUCCESS",
+            "rows": 384907
+        },
+        "JBCHEPHARM": {
+            "status": "SUCCESS",
+            "rows": 588933
+        },
+        "WOCKPHARMA": {
+            "status": "SUCCESS",
+            "rows": 615240
+        },
+        "STAR": {
+            "status": "SUCCESS",
+            "rows": 615057
+        },
+        "SEQUENT": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "LAURUSLABS": {
+            "status": "SUCCESS",
+            "rows": 583955
+        },
+        "AJANTPHARM": {
+            "status": "SUCCESS",
+            "rows": 614284
+        },
+        "YATHARTH": {
+            "status": "SUCCESS",
+            "rows": 237726
+        },
+        "RAILTEL": {
+            "status": "SUCCESS",
+            "rows": 385477
+        },
+        "JUPITERWAG": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "SIYSIL": {
+            "status": "SUCCESS",
+            "rows": 540478
+        },
+        "MAHINDCIE": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "ANANTRAJ": {
+            "status": "SUCCESS",
+            "rows": 597601
+        },
+        "ELECON": {
+            "status": "SUCCESS",
+            "rows": 577188
+        },
+        "KOLTEPATIL": {
+            "status": "SUCCESS",
+            "rows": 598764
+        },
+        "NCLIND": {
+            "status": "SUCCESS",
+            "rows": 557996
+        },
+        "JSWINFRA": {
+            "status": "SUCCESS",
+            "rows": 223476
+        },
+        "KEYSTONEREALTY": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "HEMIPROP": {
+            "status": "SUCCESS",
+            "rows": 383845
+        },
+        "LODHA": {
+            "status": "SUCCESS",
+            "rows": 385450
+        },
+        "GODREJIND": {
+            "status": "SUCCESS",
+            "rows": 613920
+        },
+        "SONACOMS": {
+            "status": "SUCCESS",
+            "rows": 385557
+        },
+        "WABCOINDIA": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "3MINDIA": {
+            "status": "SUCCESS",
+            "rows": 580478
+        },
+        "BASF": {
+            "status": "SUCCESS",
+            "rows": 579259
+        },
+        "SANOFI": {
+            "status": "SUCCESS",
+            "rows": 590893
+        },
+        "PFIZER": {
+            "status": "SUCCESS",
+            "rows": 602980
+        },
+        "GLAXO": {
+            "status": "SUCCESS",
+            "rows": 600639
+        },
+        "ASTRAZEN": {
+            "status": "SUCCESS",
+            "rows": 573187
+        },
+        "TATAMETALI": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "GRAPHITE": {
+            "status": "SUCCESS",
+            "rows": 615208
+        },
+        "HLEGLAS": {
+            "status": "SUCCESS",
+            "rows": 384184
+        },
+        "SUDARSCHEM": {
+            "status": "SUCCESS",
+            "rows": 588284
+        },
+        "KENNAMET": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "BOMDYEING": {
+            "status": "SUCCESS",
+            "rows": 613237
+        },
+        "APARINDS": {
+            "status": "SUCCESS",
+            "rows": 567484
+        },
+        "WEBSOL": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "INOXGREEN": {
+            "status": "SUCCESS",
+            "rows": 302693
+        },
+        "KIRLOSENG": {
+            "status": "SUCCESS",
+            "rows": 533625
+        },
+        "POWERMECH": {
+            "status": "SUCCESS",
+            "rows": 530457
+        },
+        "POKARNA": {
+            "status": "SUCCESS",
+            "rows": 539185
+        },
+        "GENUSPOWER": {
+            "status": "SUCCESS",
+            "rows": 576154
+        },
+        "SALASAR": {
+            "status": "SUCCESS",
+            "rows": 534942
+        },
+        "SYRMA": {
+            "status": "SUCCESS",
+            "rows": 325123
+        },
+        "STEELCAS": {
+            "status": "SUCCESS",
+            "rows": 356389
+        },
+        "GABRIEL": {
+            "status": "SUCCESS",
+            "rows": 594544
+        },
+        "JAMNAAUTO": {
+            "status": "SUCCESS",
+            "rows": 613865
+        },
+        "ENDURANCE": {
+            "status": "SUCCESS",
+            "rows": 607235
+        },
+        "DYNAMATECH": {
+            "status": "SUCCESS",
+            "rows": 501310
+        },
+        "MINDACORP": {
+            "status": "SUCCESS",
+            "rows": 601472
+        },
+        "SSWL": {
+            "status": "SUCCESS",
+            "rows": 547304
+        },
+        "SETCO": {
+            "status": "SUCCESS",
+            "rows": 494797
+        },
+        "HINDZINC": {
+            "status": "SUCCESS",
+            "rows": 615200
+        },
+        "SOMANYCERA": {
+            "status": "SUCCESS",
+            "rows": 577227
+        },
+        "KAJARIACER": {
+            "status": "SUCCESS",
+            "rows": 614946
+        },
+        "ASTRAL": {
+            "status": "SUCCESS",
+            "rows": 600218
+        },
+        "PRINCEPIPE": {
+            "status": "SUCCESS",
+            "rows": 386239
+        },
+        "SUPREMEIND": {
+            "status": "SUCCESS",
+            "rows": 606788
+        },
+        "FINOLEXIND": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "FINCABLES": {
+            "status": "SUCCESS",
+            "rows": 606996
+        },
+        "VGUARD": {
+            "status": "SUCCESS",
+            "rows": 614813
+        },
+        "POLYPLEX": {
+            "status": "SUCCESS",
+            "rows": 581563
+        },
+        "NILKAMAL": {
+            "status": "SUCCESS",
+            "rows": 585234
+        },
+        "CENTURYPLY": {
+            "status": "SUCCESS",
+            "rows": 612089
+        },
+        "GREENPLY": {
+            "status": "SUCCESS",
+            "rows": 585933
+        },
+        "KSCL": {
+            "status": "SUCCESS",
+            "rows": 612154
+        },
+        "GOLDIAM": {
+            "status": "SUCCESS",
+            "rows": 531493
+        },
+        "KDDL": {
+            "status": "SUCCESS",
+            "rows": 461004
+        },
+        "TBZ": {
+            "status": "SUCCESS",
+            "rows": 572725
+        },
+        "HUDCO": {
+            "status": "SUCCESS",
+            "rows": 614496
+        },
+        "WABAG": {
+            "status": "SUCCESS",
+            "rows": 611751
+        },
+        "FINOLEXCAB": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "CAPACITE": {
+            "status": "SUCCESS",
+            "rows": 571863
+        },
+        "SYMPHONY": {
+            "status": "SUCCESS",
+            "rows": 597287
+        },
+        "KTKBANK": {
+            "status": "SUCCESS",
+            "rows": 615158
+        },
+        "JKBANK": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "DCMSHRIRAM": {
+            "status": "SUCCESS",
+            "rows": 610416
+        },
+        "CHEMPLASTS": {
+            "status": "SUCCESS",
+            "rows": 384889
+        },
+        "RAIN": {
+            "status": "SUCCESS",
+            "rows": 614578
+        },
+        "KALPATPOWR": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "EVEREADY": {
+            "status": "SUCCESS",
+            "rows": 595847
+        },
+        "CENTURYTEX": {
+            "status": "FAILED",
+            "rows": 0
+        },
+        "ARMANFIN": {
+            "status": "SUCCESS",
+            "rows": 460909
+        },
+        "NSLNISP": {
+            "status": "SUCCESS",
+            "rows": 280107
+        },
+        "JINDALPOLY": {
+            "status": "SUCCESS",
+            "rows": 577684
+        },
+        "CHOLAHLDNG": {
+            "status": "SUCCESS",
+            "rows": 554363
+        }
+    }
+}
