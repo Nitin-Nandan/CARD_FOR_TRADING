@@ -1,179 +1,83 @@
-# Environment
-.env
-*.env
-.env.local
+# ============================================
+# 1. THE "BIG DATA" BLOCK (CRITICAL)
+# ============================================
+data/raw/
+data/processed/
+data/windows/
+data/market_indices/
+checkpoints/
+wandb/
 
-# Data files (too large for git)
-data/raw/**/*.csv
-data/market_indices/*.csv
-data/processed/*.csv
+# Block all heavy ML binaries globally
+*.parquet
+*.npy
+*.npz
+*.pt
+*.bin
+*.h5
 
-data/windows/*.npy
-data/windows/*.npz
-
-# Keep directory structure
+# Keep the directory structure only
 !data/raw/.gitkeep
-!data/market_indices/.gitkeep
 !data/processed/.gitkeep
-
 !data/windows/.gitkeep
+!checkpoints/.gitkeep
+!data/configs/
+!data/sample/
 
-# Checkpoints (large files)
-checkpoints/*.pt
-checkpoints/fine_tuned/*.pt
+# ============================================
+# 2. GENERATED REPORTS & REFERENCE BINARIES
+# ============================================
+# Auto-generated checkpoint metadata dump
+ckpt_info.txt
 
-# Results (generated)
-results/**/*.png
-results/**/*.pdf
-results/**/*.json
-results/**/*.csv
+# Reference PDFs (large binaries, not code)
+docs/reference/*.pdf
 
-# Keep results structure
-!results/.gitkeep
-!results/training_curves/.gitkeep
-!results/predictions/.gitkeep
-!results/metrics/.gitkeep
-
-# Logs
-logs/*.log
-logs/**/*.log
-logs/*.json
-logs/**/*.json
-logs/reports/*.txt
+# ============================================
+# 3. LOGS & MONITORING
+# ============================================
+logs/
 *.log
+fyersApi.log
+fyersRequests.log
+.ipynb_checkpoints/
 
-# Keep logs directory
+# Keep only the directory and reports
 !logs/.gitkeep
 !logs/reports/.gitkeep
 
-# Python
+# ============================================
+# 4. PYTHON & WINDOWS
+# ============================================
 __pycache__/
 *.py[cod]
 *$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# Virtual Environment
-venv/
-env/
-ENV/
-env.bak/
-venv.bak/
 .venv/
-conda_env/
-
-# IDEs
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-.project
-.pydevproject
-.settings/
-*.sublime-project
-*.sublime-workspace
-
-# Jupyter Notebook
-.ipynb_checkpoints/
-*.ipynb_checkpoints
-
-# PyCharm
-.idea/
-
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
-Icon
-._*
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
+venv/
+.env
+*.env
 
 # Windows
-Thumbs.db
-Thumbs.db:encryptable
-ehthumbs.db
-ehthumbs_vista.db
-*.stackdump
 [Dd]esktop.ini
+Thumbs.db
 $RECYCLE.BIN/
-*.cab
-*.msi
-*.msix
-*.msm
-*.msp
-*.lnk
 
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-cover/
+# ============================================
+# 5. AI AGENT INFRASTRUCTURE
+# ============================================
+# .agents/ is NOT ignored — rules, skills, and commands
+# form part of the project's governance layer.
 
-# Temporary files
-*.tmp
-*.temp
-*.bak
-*.swp
-*~.nib
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
+# ============================================
+# 6. VENDOR & EXTERNAL
+# ============================================
+# Ignore vendor contents but keep the directory structure
+vendor/pandas_ta/*
+!vendor/pandas_ta/.gitkeep
+!vendor/pandas_ta/setup.py
 
-# MyPy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre
-.pyre/
-
-# pytype
-.pytype/
-
-# Cython debug symbols
-cython_debug/
-
-# Profiling
-*.prof
-
-# Archives (if generated)
-*.zip
-*.tar.gz
-*.rar
-*.7z
-
-# Except sample data (if you want to include a small sample)
-!data/sample/**
+# Ignore build artifacts
+vendor/pandas_ta/*.egg-info/
+vendor/pandas_ta/build/
+vendor/pandas_ta/dist/
+vendor/pandas_ta/__pycache__/
