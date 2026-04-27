@@ -1,0 +1,24 @@
+# CARD_FOR_TRADING - Workspace Context Control
+
+[workspace]
+# Prevent the AI from indexing massive datasets and artifacts
+ignore_paths = [
+    ".venv",
+    "__pycache__",
+    ".git",
+    "data/raw",
+    "data/processed",
+    "data/windows",
+    "checkpoints",
+    "wandb",
+    "logs/archive",
+    "*.parquet",
+    "*.npz",
+    "*.npy",
+    "*.pt"
+]
+
+[project]
+name = "CARD_FOR_TRADING"
+type = "Quantitative Machine Learning"
+# Removed main_entrypoint to allow for active development
