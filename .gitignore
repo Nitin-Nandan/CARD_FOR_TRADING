@@ -81,3 +81,8 @@ vendor/pandas_ta/*.egg-info/
 vendor/pandas_ta/build/
 vendor/pandas_ta/dist/
 vendor/pandas_ta/__pycache__/
+
+# ============================================
+# 7. GRAPHIFY
+# ============================================
+graphify-out/
