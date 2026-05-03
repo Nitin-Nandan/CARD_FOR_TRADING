@@ -4,6 +4,7 @@
 data/raw/
 data/processed/
 data/windows/
+data/cache/
 data/market_indices/
 checkpoints/
 wandb/
