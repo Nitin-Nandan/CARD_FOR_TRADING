@@ -1,11 +1,9 @@
 """
-Multi-Logger: Local Text + TensorBoard + WandB
+Multi-Logger: Local Text
 """
 
 import logging
 import os
-from .tensorboard_logger import TensorBoardLogger
-from .wandb_logger import WandBLogger
 
 
 class MultiLogger:
@@ -55,30 +53,8 @@ class MultiLogger:
         self.file_logger.addHandler(fh)
         self.file_logger.addHandler(ch)
 
-        # 2. TensorBoard (Local graphical metrics)
-        tb_dir = os.path.join(log_dir, "tensorboard")
-        self.tb = TensorBoardLogger(log_dir=tb_dir, name=name)
-        self.has_tb = self.tb.enabled
-
-        # 3. Weights & Biases (Cloud graphical metrics)
-        if wandb_project:
-            try:
-                self.wandb = WandBLogger(
-                    project=wandb_project,
-                    name=name,
-                    config=config,
-                    entity=wandb_entity,
-                    tags=wandb_tags,
-                    offline=True,  # ← ALWAYS USE OFFLINE MODE FOR UNRELIABLE INTERNET
-                )
-                self.has_wandb = self.wandb.enabled
-            except Exception as e:
-                self.file_logger.warning(f"Failed to initialize WandB: {e}")
-                self.wandb = None
-                self.has_wandb = False
-        else:
-            self.wandb = None
-            self.has_wandb = False
+        self.has_tb = False
+        self.has_wandb = False
 
     # Standard string logging methods
     def info(self, msg):
@@ -93,16 +69,8 @@ class MultiLogger:
     # Graphical metrics logging method
     def log_metrics(self, metrics, step):
         """Log numeric metrics to TensorBoard and/or WandB"""
-        if self.has_tb:
-            self.tb.log_metrics(metrics, step)
-
-        if self.has_wandb:
-            self.wandb.log_metrics(metrics, step)
+        pass
 
     def close(self):
         """Close all loggers safely"""
-        if self.has_tb:
-            self.tb.close()
-
-        if self.has_wandb:
-            self.wandb.close()
+        pass

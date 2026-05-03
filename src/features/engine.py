@@ -5,6 +5,9 @@ Feature Engine: 81-Channel Feature Engineering
 import numpy as np
 import pandas as pd
 from datetime import time
+from .momentum import add_momentum_features
+from .volatility import add_volatility_features
+from .volume import add_volume_features
 
 
 class FeatureEngine:
@@ -123,9 +126,9 @@ class FeatureEngine:
         df = self.handle_missing_data(df)
 
         # 2. Base Features
-        df = self.add_momentum_features(df)
-        df = self.add_volatility_features(df)
-        df = self.add_volume_features(df)
+        df = add_momentum_features(df)
+        df = add_volatility_features(df)
+        df = add_volume_features(df)
         df = self.add_price_features(df)
         df = self.add_time_features(df)
         df = self.add_pattern_features(df)
@@ -170,108 +173,7 @@ class FeatureEngine:
     def handle_missing_data(self, df):
         return df.ffill(limit=5).dropna().copy()
 
-    def add_momentum_features(self, df):
-        def rsi(series, period=14):
-            delta = series.diff()
-            gain = (delta.where(delta > 0, 0)).rolling(period).mean()
-            loss = (-delta.where(delta < 0, 0)).rolling(period).mean()
-            return 100 - (100 / (1 + (gain / (loss + 1e-8))))
 
-        df["rsi_7"] = rsi(df["close"], 7)
-        df["rsi_14"] = rsi(df["close"], 14)
-        df["rsi_21"] = rsi(df["close"], 21)
-
-        df["ema_12"] = df["close"].ewm(span=12).mean()
-        df["ema_26"] = df["close"].ewm(span=26).mean()
-        df["macd"] = df["ema_12"] - df["ema_26"]
-        df["macd_signal"] = df["macd"].ewm(span=9).mean()
-        df["macd_hist"] = df["macd"] - df["macd_signal"]
-
-        low_14, high_14 = df["low"].rolling(14).min(), df["high"].rolling(14).max()
-        df["stoch_k"] = 100 * (df["close"] - low_14) / (high_14 - low_14 + 1e-8)
-        df["stoch_d"] = df["stoch_k"].rolling(3).mean()
-
-        df["roc_5"] = df["close"].pct_change(5) * 100
-        df["roc_10"] = df["close"].pct_change(10) * 100
-        df["roc_20"] = df["close"].pct_change(20) * 100
-        df["williams_r"] = -100 * (high_14 - df["close"]) / (high_14 - low_14 + 1e-8)
-        return df
-
-    def add_volatility_features(self, df):
-        tr = pd.concat(
-            [
-                df["high"] - df["low"],
-                abs(df["high"] - df["close"].shift(1)),
-                abs(df["low"] - df["close"].shift(1)),
-            ],
-            axis=1,
-        ).max(axis=1)
-        df["true_range"] = tr
-        df["atr_7"] = tr.rolling(7).mean()
-        df["atr_14"] = tr.rolling(14).mean()
-
-        rets = df["close"].pct_change()
-        df["hv_10"] = rets.rolling(10 * 375).std() * np.sqrt(252 * 375)
-        df["hv_20"] = rets.rolling(20 * 375).std() * np.sqrt(252 * 375)
-        df["hv_30"] = rets.rolling(30 * 375).std() * np.sqrt(252 * 375)
-
-        df["vol_ratio_short"] = df["hv_10"] / (df["hv_30"] + 1e-8)
-        df["vol_expansion"] = df["atr_7"] / (df["atr_14"] + 1e-8)
-
-        df["parkinson_vol"] = np.sqrt(
-            (np.log(df["high"] / df["low"].replace(0, 1e-8)) ** 2).rolling(20).mean()
-            / (4 * np.log(2))
-        )
-        df["gk_vol"] = np.sqrt(
-            (
-                0.5 * np.log(df["high"] / df["low"].replace(0, 1e-8)) ** 2
-                - (2 * np.log(2) - 1)
-                * np.log(df["close"] / df["open"].replace(0, 1e-8)) ** 2
-            )
-            .rolling(20)
-            .mean()
-        )
-        return df
-
-    def add_volume_features(self, df):
-        df["volume_sma_10"] = df["volume"].rolling(10).mean()
-        df["volume_sma_20"] = df["volume"].rolling(20).mean()
-        df["volume_ratio"] = df["volume"] / (df["volume_sma_20"] + 1e-8)
-        df["volume_roc"] = df["volume"].pct_change(10) * 100
-        df["obv"] = (np.sign(df["close"].diff()) * df["volume"]).fillna(0).cumsum()
-        df["obv_ema"] = df["obv"].ewm(span=20).mean()
-
-        df["typical_price"] = (df["high"] + df["low"] + df["close"]) / 3
-        df["money_flow"] = df["typical_price"] * df["volume"]
-
-        df["vwap"] = (df["typical_price"] * df["volume"]).groupby(
-            df["timestamp"].dt.date
-        ).cumsum() / (df["volume"].groupby(df["timestamp"].dt.date).cumsum() + 1e-8)
-
-        def mfi(df, p=14):
-            mf = df["typical_price"] * df["volume"]
-            pos = (
-                mf.where(df["typical_price"] > df["typical_price"].shift(1), 0)
-                .rolling(p)
-                .sum()
-            )
-            neg = (
-                mf.where(df["typical_price"] < df["typical_price"].shift(1), 0)
-                .rolling(p)
-                .sum()
-            )
-            return 100 - (100 / (1 + (pos / (neg + 1e-8))))
-
-        df["mfi"] = mfi(df)
-        df["vpt"] = (df["volume"] * df["close"].pct_change()).fillna(0).cumsum()
-        df["force_index"] = df["close"].diff() * df["volume"]
-        df["force_index_ema"] = df["force_index"].ewm(span=13).mean()
-        clv = ((df["close"] - df["low"]) - (df["high"] - df["close"])) / (
-            df["high"] - df["low"] + 1e-8
-        )
-        df["ad_line"] = (clv.fillna(0) * df["volume"]).cumsum()
-        df["volume_surge"] = (df["volume_ratio"] > 2.0).astype(int)
-        return df
 
     def add_price_features(self, df):
         df["ema_20"] = df["close"].ewm(span=20).mean()
