@@ -1,76 +1,77 @@
 """
-Multi-Logger: Local Text
+Run logger for CARD training.
+
+Design principle (project rule — applies to ALL agents and scripts):
+  - Terminal shows ONLY clean, human-readable progress lines.
+  - ALL detail (timestamps, metrics, loss components) goes to the log file only.
+  - No WandB, TensorBoard, or dead stubs.
 """
 
 import logging
-import os
+import re
+from pathlib import Path
 
 
-class MultiLogger:
-    def __init__(
-        self,
-        log_dir,
-        name,
-        config=None,
-        wandb_project=None,
-        wandb_entity=None,
-        wandb_tags=None,
-    ):
-        """
-        Initialize multiple logging backends automatically
-        """
-        self.name = name
+def _strip_ansi(msg: str) -> str:
+    return re.sub(r"\x1b\[[0-9;]*m", "", msg)
 
-        # 1. Standard Python File/Console Logger
-        os.makedirs(log_dir, exist_ok=True)
-        log_file = os.path.join(log_dir, f"{name}.log")
 
-        self.file_logger = logging.getLogger(name)
-        self.file_logger.setLevel(logging.INFO)
-        self.file_logger.propagate = False  # Prevent double logging
+class RunLogger:
+    """
+    Two-channel logger:
+        file    — DEBUG+, full timestamps (everything)
+        console — WARNING+ only (errors and warnings visible at terminal)
 
-        # Clear existing handlers
-        if self.file_logger.hasHandlers():
-            self.file_logger.handlers.clear()
+    Use print() for clean human-readable terminal output (progress summaries).
+    Use logger.info() for detail that belongs only in the log file.
+    """
 
-        # File handler
-        fh = logging.FileHandler(log_file)
-        fh.setLevel(logging.INFO)
+    def __init__(self, log_dir: str, run_name: str):
+        self.run_name = run_name
+        log_path = Path(log_dir) / f"{run_name}.log"
+        log_path.parent.mkdir(parents=True, exist_ok=True)
+        self.log_path = log_path
 
-        # Console handler
+        self._logger = logging.getLogger(f"card.{run_name}")
+        self._logger.setLevel(logging.DEBUG)
+        self._logger.propagate = False
+
+        if self._logger.hasHandlers():
+            self._logger.handlers.clear()
+
+        fh = logging.FileHandler(log_path, mode="a", encoding="utf-8")
+        fh.setLevel(logging.DEBUG)
+        fh.setFormatter(logging.Formatter(
+            "%(asctime)s  %(levelname)-8s  %(message)s",
+            datefmt="%Y-%m-%d %H:%M:%S",
+        ))
+        self._logger.addHandler(fh)
+
         ch = logging.StreamHandler()
-        ch.setLevel(logging.INFO)
+        ch.setLevel(logging.WARNING)
+        ch.setFormatter(logging.Formatter("%(levelname)s  %(message)s"))
+        self._logger.addHandler(ch)
 
-        # Formatters
-        detailed_formatter = logging.Formatter(
-            "%(asctime)s - %(levelname)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S"
+    def info(self, msg: str) -> None:
+        """Log to file only — not terminal."""
+        self._logger.info(_strip_ansi(msg))
+
+    def warning(self, msg: str) -> None:
+        """Log to file AND terminal."""
+        self._logger.warning(_strip_ansi(msg))
+
+    def error(self, msg: str) -> None:
+        """Log to file AND terminal."""
+        self._logger.error(_strip_ansi(msg))
+
+    def metric(self, step: int, **kwargs) -> None:
+        """Log numeric metrics to file (one line per call)."""
+        parts = "  ".join(
+            f"{k}={v:.6f}" if isinstance(v, float) else f"{k}={v}"
+            for k, v in kwargs.items()
         )
-        clean_formatter = logging.Formatter("%(message)s")
+        self._logger.info(f"[step={step}]  {parts}")
 
-        fh.setFormatter(detailed_formatter)
-        ch.setFormatter(clean_formatter)
-
-        self.file_logger.addHandler(fh)
-        self.file_logger.addHandler(ch)
-
-        self.has_tb = False
-        self.has_wandb = False
-
-    # Standard string logging methods
-    def info(self, msg):
-        self.file_logger.info(msg)
-
-    def warning(self, msg):
-        self.file_logger.warning(msg)
-
-    def error(self, msg):
-        self.file_logger.error(msg)
-
-    # Graphical metrics logging method
-    def log_metrics(self, metrics, step):
-        """Log numeric metrics to TensorBoard and/or WandB"""
-        pass
-
-    def close(self):
-        """Close all loggers safely"""
-        pass
+    def log_metrics(self, metrics: dict, step: int) -> None:
+        """Compatibility shim for older call sites."""
+        self.metric(step, **metrics)

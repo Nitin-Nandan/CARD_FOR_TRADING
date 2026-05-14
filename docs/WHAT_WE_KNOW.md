@@ -1,1 +1,5 @@
 Project structure audited on 2026-05-02. 10 files/dirs moved. 0 violations outstanding (2 ignored by user).
+
+- **CARD Model for NSE**: The ICLR 2024 CARD model is designed for MTS forecasting with channel-aligned attention, a token blend module, and uncertainty-weighted robust loss. When applying to NSE stocks, inputs must be stationary (e.g. log returns) and may require denoising to avoid overfitting to spurious cross-channel correlations. Research completed on 2026-05-03.
+- **Fresh Start (2026-05-03)**: All old intraday (15-min, Fyers API, 81-feature) code moved to `archive/intraday_v1/`. New daily pipeline built: 25 NSE stocks via yfinance, 15 stationary daily features, CARD with enc_in=15 / seq_len=120 / pred_len=5. All 5 smoke tests pass.
+- **Audit & Clean Terminal (2026-05-03)**: Reused training modules (`epoch.py`, `evaluator.py`, `callbacks.py`, `loss.py`) audited and stripped of legacy/intraday/WandB junk. Implemented `RunLogger` to enforce a clean terminal protocol. Established standards in `.agents/rules/core_project_rules.md`.

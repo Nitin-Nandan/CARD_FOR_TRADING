@@ -1,11 +1,18 @@
+"""
+Module: src/training/loss.py
+Purpose: Combined Loss for stock return prediction.
+"""
+
 import torch
 import torch.nn as nn
 import math
 
-
 class CombinedReturnLoss(nn.Module):
     """
     Combined Loss: Signal Decay MAE + Directional Penalty.
+    
+    Weights are applied to the MAE across the prediction horizon to prioritize
+    short-term accuracy while still penalizing long-term drift.
     """
 
     def __init__(self, directional_weight=10.0, magnitude_scale=1000.0):
@@ -16,8 +23,8 @@ class CombinedReturnLoss(nn.Module):
     def forward(self, pred_returns, true_returns):
         """
         Args:
-            pred_returns: (batch, 15) predicted returns
-            true_returns: (batch, 15) true returns
+            pred_returns: (batch, pred_len) predicted returns
+            true_returns: (batch, pred_len) true returns
         """
         batch_size, pred_len = pred_returns.shape
 
@@ -46,7 +53,7 @@ class CombinedReturnLoss(nn.Module):
         # 3. COMBINED LOSS
         total_loss = scaled_mae + scaled_direction_penalty
 
-        # 4. METRICS
+        # 4. METRICS (keys must match what logger/epoch expects)
         loss_dict = {
             "total": total_loss.item(),
             "weighted_mae": weighted_mae.item(),
