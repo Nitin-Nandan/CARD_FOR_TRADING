@@ -8,6 +8,9 @@ numpy==1.24.3
 pandas==2.0.3
 scipy==1.11.2
 
+# Market Data (daily NSE via yfinance)
+yfinance>=0.2.40
+
 # Fyers API
 fyers-apiv3==3.1.5
 python-dotenv==1.0.0
