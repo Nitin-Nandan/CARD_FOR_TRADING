@@ -1,6 +1,6 @@
 ---
 name: project-tidy
-description: Audits and tidies the NSE CARD project file structure. Triggers when the human says "tidy the project", "clean up structure", "reorganise files", "audit the layout", "files are in the wrong place", or after any large coding session. Reads the full project tree, classifies every file against the canonical structure in RULES.md, writes a TIDY PLAN with exact proposed moves, waits for human approval, then executes only the approved changes one at a time. Never deletes, never renames, never touches raw data or model weights, never moves anything without approval. Use this skill proactively after any session that creates multiple new files.
+description: Audits and tidies the NSE CARD project file structure. Triggers when the human says "tidy the project", "clean up structure", "reorganise files", "audit the layout", "files are in the wrong place", or after any large coding session. Reads the full project tree, classifies every file against the canonical structure and hygiene rules, writes a TIDY PLAN with exact proposed moves/deletions, waits for human approval, then executes approved changes one at a time. Proactively identifies and proposes deletion of __pycache__, redundant .gitkeep, and obsolete archive contents. Use this skill proactively after any session that creates multiple new files.
 ---
 
 # Project Tidy Skill
@@ -15,7 +15,7 @@ This skill is used to audit and clean up the structure of the NSE stock predicti
 - When onboarding a new session and the human wants to re-establish structure
 
 ## Canonical Project Structure
-This is the target structure from `RULES.md` (specifically `core_project_rules.md`). You must measure every file against this:
+This is the target structure from the modular rules (specifically `structure.md` and `hygiene.md`). You must measure every file against this:
 ```text
 project-root/
 ├── .agents/
@@ -57,8 +57,12 @@ project-root/
 - Any `*.pth`, `*.pt`, `*.ckpt`, `*.pkl` files — trained model weights
 - Any `*.parquet`, `*.csv`, `*.feather` files inside `data/` — processed datasets
 - The `.git/` directory obviously
-- Any `__pycache__/` or `*.pyc` files — these are auto-generated
 - Any file the human has explicitly told you to leave alone in this session
+
+### ALWAYS Flag These as HYGIENE VIOLATIONS (SAFE to propose deletion)
+- `__pycache__/` folders or `*.pyc` files — forbidden in the workspace.
+- `.gitkeep` files in directories that already contain other files — redundant and messy.
+- Obsolete or empty files/directories in `archive/` — keep only relevant legacy reference.
 
 ### ALWAYS Flag These as VIOLATIONS
 Do NOT auto-fix these; require a human decision:
@@ -82,7 +86,7 @@ You may propose to move these (after plan approval):
 ### STRICT PROHIBITIONS
 - **NEVER rename files — only move them.** Renaming breaks imports. Only move files to correct locations. If a file needs renaming, flag it to the human with a suggestion but do not execute the rename.
 - **NEVER execute any Python script or shell command** (other than moving files).
-- **NEVER delete any file.** Move to `archive/` if needed, never delete.
+- **NEVER delete any core project file.** Only hygiene violations (pycache, redundant gitkeep, obsolete archive) can be proposed for deletion.
 - **NEVER touch raw data or model weights.**
 - **NEVER move anything without showing the plan and getting approval first.**
 - **NEVER update import paths automatically** — only list them for the human.
@@ -100,8 +104,7 @@ You may propose to move these (after plan approval):
 For each file found, silently classify it as one of:
 - **CORRECT** — already in the right place
 - **MISPLACED** — should be somewhere else (safe to propose move)
-- **VIOLATION** — breaks a structural rule (must flag, cannot auto-fix)
-- **UNKNOWN** — cannot determine correct location without human input
+- **HYGIENE** — forbidden/redundant file (safe to propose deletion)
 - **PROTECTED** — in the never-touch list (skip entirely)
 
 ### Step 3: Write the TIDY PLAN
@@ -122,11 +125,17 @@ Audit complete. Here is what I found and propose.
 
 ### Proposed Moves (safe to execute after your approval)
 
-1. MOVE `root/train_card.py` → `pipeline/03_train.py`
+1. MOVE `root/train_card.py` → `pipeline/train_daily.py`
    Reason: Training orchestration script sitting at root. No logic change, import paths unaffected as it's a pipeline script.
 
-2. MOVE `test_dataset.py` (in src/data/) → `tests/test_dataset.py`
-   Reason: Test file in wrong location per RULES.md.
+2. DELETE `src/data/__pycache__`
+   Reason: Forbidden temporary directory.
+
+3. DELETE `logs/.gitkeep`
+   Reason: Directory is no longer empty; .gitkeep is redundant.
+
+4. DELETE `archive/intraday_v1/empty_subdir`
+   Reason: Empty and obsolete archive content.
 
 [... and so on for each proposed move ...]
 

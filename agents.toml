@@ -15,7 +15,8 @@ ignore_paths = [
     "*.parquet",
     "*.npz",
     "*.npy",
-    "*.pt"
+    "*.pt",
+    "vendor/"
 ]
 
 [project]

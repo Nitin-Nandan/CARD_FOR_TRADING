@@ -1,0 +1,48 @@
+{
+  "topic": "CARD_NSE_Stocks",
+  "goal": "Assess the suitability and required adaptations of the ICLR 2024 CARD model for predicting NSE stock prices.",
+  "researched_at": "2026-05-03",
+  "confidence": "medium",
+  "method": {
+    "name": "CARD (Channel Aligned Robust Blend Transformer)",
+    "paper_id": "2305.12095v5",
+    "venue": "ICLR",
+    "year": 2024,
+    "designed_for": "Multivariate time series forecasting (long-term and short-term)",
+    "validated_on": ["ETTm1", "ETTm2", "ETTh1", "ETTh2", "Weather", "Electricity", "Traffic", "ILI", "Exchange"],
+    "validated_frequencies": ["15-min", "1-hour", "Daily", "Weekly"],
+    "architecture_summary": "Transformer utilizing channel-aligned attention, token blend module for multi-scale resolution, and a robust loss weighting based on prediction uncertainty.",
+    "inputs": "Multivariate time series sequences",
+    "outputs": "Forecasted sequence values",
+    "key_hyperparameters": {"lookback_length": 96, "attention_type": "channel-aligned"},
+    "known_limitations": ["Requires self-attention rather than simple MLPs, potentially overfitting noisy data if cross-channel correlations are spurious"]
+  },
+  "domain": {
+    "name": "NSE Stock Prediction",
+    "problem_framing": "Predicting daily or intraday directional price movement and volatility for NSE equities",
+    "data_requirements": "Highly stationary inputs (returns, fractional differences), anomaly tags, denoised signals",
+    "current_sota": ["Transformers with Convolutional Autoencoders", "Anomaly-Aware Transformers"],
+    "known_challenges": ["Low signal-to-noise ratio", "Non-stationarity", "Regime shifts"],
+    "recommended_frequencies": ["Daily", "15-min"]
+  },
+  "adaptation_gap": [
+    "Data Stationarity: Transform stock prices to log returns before feeding into CARD.",
+    "Noise Handling: Pre-process data with a denoising mechanism to avoid overfitting to spurious cross-channel correlations.",
+    "Multi-scale tokens: Tune the token blend module for market-specific cycles instead of physical seasonalities."
+  ],
+  "context_for_ai": "The CARD model is a transformer designed for multivariate time series forecasting that leverages channel-aligned attention, a token blend module, and uncertainty-weighted robust loss. It was validated on benchmarks like ETT, Weather, and Exchange at frequencies from 15-min to daily. The NSE stock domain requires models to handle extreme non-stationarity, low signal-to-noise ratios, and regime shifts. 1. Prices must be transformed to returns to ensure stationarity. 2. Cross-channel attention might overfit noise, necessitating denoised inputs. 3. The token blend module must be adapted for market cycles. The best implementation is the official 'wxie9/CARD' repository (research quality). Start by testing this model on a single liquid NSE stock using log-returns and compare against a channel-independent baseline.",
+  "sources": ["arXiv:2305.12095v5", "Tavily search on Financial Transformers"],
+  "implementations": {
+    "best_repo": "https://github.com/wxie9/CARD",
+    "quality": "research",
+    "stars": 100,
+    "last_commit": "2024",
+    "notes": "Official PyTorch implementation by the authors."
+  },
+  "open_questions": [
+    "How does the token blend module behave when applied to non-seasonal asset returns?",
+    "Does the robust loss function naturally handle earnings gap-ups and gap-downs?"
+  ],
+  "related_methods": ["PatchTST", "Autoformer", "Anomaly-Aware Transformer"],
+  "confidence_notes": "Medium confidence: Architecture well understood from the primary source, but specific stock-market adaptations are inferred from general financial ML literature."
+}
